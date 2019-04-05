@@ -1,0 +1,62 @@
+- module: jolokia
+  metricsets: ["jmx"]
+  enable: true
+  period: 10s
+  namespace: "kafka"
+  hosts: ["localhost:8778/jolokia/"]
+  jmx.mappings:
+      - mbean: 'java.lang:type=Runtime'
+        attributes:
+            - attr: Uptime
+              field: uptime 
+              event: uptime 
+      - mbean: 'java.lang:type=Memory'
+        attributes:
+            - attr: HeapMemoryUsage
+              field: HeapMemoryUsage 
+              event: memory 
+      - mbean: 'java.lang:type=Memory'
+        attributes:
+            - attr: NonHeapMemoryUsage
+              field: NonHeapMemoryUsage 
+              event: memory 
+      - mbean: 'kafka.server:name=MessagesInPerSec,topic=*,type=BrokerTopicMetrics'
+        attributes:
+            - attr: Count
+              field: message-in 
+              event: topic 
+      - mbean: 'kafka.server:name=MessagesInPerSec,topic=*,type=BrokerTopicMetrics'
+        attributes:
+            - attr: OneMinuteRate
+              field: OneMinuteRate
+              event: topic 
+
+- module: jolokia
+  metricsets: ["jmx"]
+  enable: true
+  period: 10s
+  namespace: "zookeeper"
+  hosts: ["localhost:8779/jolokia/"]
+  jmx.mappings:
+      - mbean: 'java.lang:type=Runtime'
+        attributes:
+            - attr: Uptime
+              field: uptime 
+              event: uptime 
+
+- module: jolokia
+  metricsets: ["jmx"]
+  enable: true
+  period: 10s
+  namespace: "sdc"
+  hosts: ["localhost:8780/jolokia/"]
+  jmx.mappings:
+#     - mbean: 'java.lang:type=Runtime'
+#       attributes:
+#           - attr: Uptime
+#             field: uptime 
+#             event: uptime 
+      - mbean: 'java.lang:type=*'
+        attributes:
+            - attr: InputArguments
+              field: InputArguments 

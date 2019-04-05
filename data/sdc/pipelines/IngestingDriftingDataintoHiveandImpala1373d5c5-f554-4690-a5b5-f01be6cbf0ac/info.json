@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "IngestingDriftingDataintoHiveandImpala1373d5c5-f554-4690-a5b5-f01be6cbf0ac",
+  "title" : "Ingesting Drifting Data into Hive and Impala",
+  "description" : "Ingesting Drifting Data into Hive and Impala",
+  "created" : 1526261452569,
+  "lastModified" : 1547708442854,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "dbdcbb35-da67-421d-9f9b-cb15d9269fdb",
+  "valid" : false,
+  "metadata" : {
+    "labels" : [ "tutorial-hivedrift" ]
+  },
+  "name" : "IngestingDriftingDataintoHiveandImpala1373d5c5-f554-4690-a5b5-f01be6cbf0ac",
+  "sdcVersion" : "3.1.0.0",
+  "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+}

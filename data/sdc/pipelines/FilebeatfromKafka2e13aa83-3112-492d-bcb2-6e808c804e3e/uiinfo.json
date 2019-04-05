@@ -1,0 +1,231 @@
+{
+  "ExpressionEvaluator_05" : {
+    "description" : "将message中的换行符转换为特殊字符，因为SDC不支持多行匹配",
+    "label" : "Message translation",
+    "xPos" : 280,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_04" : {
+    "description" : "",
+    "label" : "Expression Evaluator 4",
+    "xPos" : 940,
+    "yPos" : 560,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_07" : {
+    "description" : "",
+    "label" : "Expression Evaluator 5",
+    "xPos" : 949.3077392578125,
+    "yPos" : 40,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_06" : {
+    "description" : "",
+    "label" : "Expression Evaluator 4",
+    "xPos" : 940,
+    "yPos" : 690,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_01" : {
+    "description" : "",
+    "label" : "Expression Evaluator 1",
+    "xPos" : 940,
+    "yPos" : 950,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_03" : {
+    "description" : "",
+    "label" : "Expression Evaluator 3",
+    "xPos" : 940,
+    "yPos" : 820,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_02" : {
+    "description" : "根据实际timestamp修改缺省@timestamp，同时将message的剩余部分中的特殊字符转换为换行符",
+    "label" : "Modify @timestamp",
+    "xPos" : 1600,
+    "yPos" : 950,
+    "stageType" : "PROCESSOR"
+  },
+  "com_streamsets_pipeline_stage_processor_fieldtypeconverter_FieldTypeConverterDProcessor_1" : {
+    "description" : "",
+    "yPos" : 950,
+    "xPos" : 1160,
+    "label" : "Field Converter 1",
+    "stageType" : "PROCESSOR"
+  },
+  "Elasticsearch_01" : {
+    "description" : "",
+    "label" : "Elasticsearch 1",
+    "xPos" : 2040,
+    "yPos" : 950,
+    "stageType" : "TARGET"
+  },
+  "FieldFlattener_02" : {
+    "description" : "",
+    "label" : "Flatter field message",
+    "xPos" : 1380,
+    "yPos" : 950,
+    "stageType" : "PROCESSOR"
+  },
+  "KafkaMultitopicConsumer_01" : {
+    "yPos" : 50,
+    "stageType" : "SOURCE",
+    "rawSource" : {
+      "configuration" : [ {
+        "name" : "brokerHost",
+        "value" : "localhost"
+      }, {
+        "name" : "brokerPort",
+        "value" : 9092
+      }, {
+        "name" : "topic",
+        "value" : "myTopic"
+      }, {
+        "name" : "pollTimeout",
+        "value" : 1000
+      } ]
+    },
+    "description" : "将beats收集的数据分别存储到Elasticsearch对应的index中",
+    "label" : "Beats from kafka",
+    "xPos" : 60
+  },
+  "LocalFS_01" : {
+    "description" : "",
+    "label" : "Local FS 1",
+    "xPos" : 720,
+    "yPos" : 1080,
+    "stageType" : "TARGET"
+  },
+  "FieldTypeConverter_04" : {
+    "description" : "",
+    "label" : "Field Type Converter 3",
+    "xPos" : 1160,
+    "yPos" : 690,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldTypeConverter_03" : {
+    "description" : "",
+    "label" : "Field Type Converter 2",
+    "xPos" : 1160,
+    "yPos" : 820,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldTypeConverter_02" : {
+    "description" : "改变@timestamp为ES支持格式",
+    "label" : "Change @timestamp style",
+    "xPos" : 1821.6666259765625,
+    "yPos" : 950,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldTypeConverter_08" : {
+    "description" : "",
+    "label" : "Field Type Converter 6",
+    "xPos" : 940,
+    "yPos" : 170,
+    "stageType" : "PROCESSOR"
+  },
+  "StreamSelector_02" : {
+    "description" : "",
+    "label" : "Stream Selector 2",
+    "xPos" : 503.15380859375,
+    "yPos" : 320,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldTypeConverter_07" : {
+    "description" : "",
+    "label" : "Field Type Converter 5",
+    "xPos" : 940,
+    "yPos" : 300,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldTypeConverter_06" : {
+    "description" : "",
+    "label" : "Field Type Converter 5",
+    "xPos" : 940,
+    "yPos" : 430,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldTypeConverter_05" : {
+    "description" : "",
+    "label" : "Field Type Converter 4",
+    "xPos" : 1160,
+    "yPos" : 560,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldTypeConverter_09" : {
+    "description" : "",
+    "label" : "Field Type Converter 7",
+    "xPos" : 1160,
+    "yPos" : 40,
+    "stageType" : "PROCESSOR"
+  },
+  "DataParser_08" : {
+    "description" : "",
+    "label" : "Redis",
+    "xPos" : 721.6666870117188,
+    "yPos" : 40,
+    "stageType" : "PROCESSOR"
+  },
+  "DataParser_07" : {
+    "description" : "",
+    "label" : "Supervisor",
+    "xPos" : 720,
+    "yPos" : 170,
+    "stageType" : "PROCESSOR"
+  },
+  "DataParser_06" : {
+    "description" : "",
+    "label" : "SDC",
+    "xPos" : 720,
+    "yPos" : 300,
+    "stageType" : "PROCESSOR"
+  },
+  "DataParser_05" : {
+    "description" : "",
+    "label" : "Elasticsearch",
+    "xPos" : 720,
+    "yPos" : 430,
+    "stageType" : "PROCESSOR"
+  },
+  "DataParser_04" : {
+    "description" : "",
+    "label" : "Mysql errlog",
+    "xPos" : 720,
+    "yPos" : 560,
+    "stageType" : "PROCESSOR"
+  },
+  "DataParser_03" : {
+    "description" : "",
+    "label" : "Kafka & zookeeper log",
+    "xPos" : 720,
+    "yPos" : 690,
+    "stageType" : "PROCESSOR"
+  },
+  "DataParser_02" : {
+    "description" : "",
+    "label" : "Authlog",
+    "xPos" : 720,
+    "yPos" : 950,
+    "stageType" : "PROCESSOR"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : "100",
+      "timeout" : 10000,
+      "writeToDestinations" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "DataParser_01" : {
+    "description" : "",
+    "label" : "Syslog",
+    "xPos" : 718.3333129882812,
+    "yPos" : 820,
+    "stageType" : "PROCESSOR"
+  }
+}

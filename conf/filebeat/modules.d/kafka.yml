@@ -1,0 +1,15 @@
+- module: kafka
+  # All logs
+  log:
+    enabled: true
+
+    # Set custom paths for Kafka. If left empty,
+    # Filebeat will look under /opt.
+    #var.kafka_home:
+    var.kafka_home: /home/zhanyl/software/kafka
+
+    # Set custom paths for the log files. If left empty,
+    # Filebeat will choose the paths depending on your OS.
+    #var.paths:
+    var.paths: ['/home/zhanyl/log/kafka/*.log', '/home/zhanyl/log/zookeeper/*.log']
+

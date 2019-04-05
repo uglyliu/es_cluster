@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "ReadCSVfromLocalDirectorydec75e80-21d9-4bb6-8bde-55c1c8f0a6be",
+  "title" : "Basic Tutorial",
+  "description" : "Basic Tutorial",
+  "created" : 1521617813444,
+  "lastModified" : 1540862501560,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "3d10bbda-b6f0-4030-9dd1-287efe04bb14",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ "Basic Tutorial" ]
+  },
+  "name" : "ReadCSVfromLocalDirectorydec75e80-21d9-4bb6-8bde-55c1c8f0a6be",
+  "sdcVersion" : "3.1.0.0",
+  "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+}

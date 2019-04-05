@@ -1,0 +1,17 @@
+{
+  "pipelineId" : "IngestingDriftingDataintoHiveandImpala1373d5c5-f554-4690-a5b5-f01be6cbf0ac",
+  "rev" : "0",
+  "user" : "admin",
+  "status" : "EDITED",
+  "message" : "Pipeline edited",
+  "timeStamp" : 1547708442869,
+  "attributes" : {
+    "IS_REMOTE_PIPELINE" : false,
+    "RUNTIME_PARAMETERS" : null
+  },
+  "executionMode" : "STANDALONE",
+  "metrics" : null,
+  "retryAttempt" : 0,
+  "nextRetryTimeStamp" : 0,
+  "name" : "IngestingDriftingDataintoHiveandImpala1373d5c5-f554-4690-a5b5-f01be6cbf0ac"
+}

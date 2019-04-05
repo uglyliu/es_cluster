@@ -1,0 +1,10 @@
+*
+!index.js
+!package-lock.json
+!package.json
+!.babelrc
+!src/
+!scripts/
+!elastalert_modules/
+!rule_templates/
+!config/

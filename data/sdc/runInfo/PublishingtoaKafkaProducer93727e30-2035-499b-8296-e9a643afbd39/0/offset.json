@@ -1,0 +1,7 @@
+{
+  "version" : 2,
+  "offsets" : {
+    "$com.streamsets.pipeline.stage.origin.spooldir.SpoolDirSource.offset.version$" : "1",
+    "ccsample" : "{\"POS\":\"-1\"}"
+  }
+}

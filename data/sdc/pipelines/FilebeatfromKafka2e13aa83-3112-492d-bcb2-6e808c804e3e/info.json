@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "FilebeatfromKafka2e13aa83-3112-492d-bcb2-6e808c804e3e",
+  "title" : "Filebeat from Kafka",
+  "description" : "将所有filebeat上传的数据分别存储到Elasticsearch中对应的index中",
+  "created" : 1527605684821,
+  "lastModified" : 1552699298371,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "e9747ac4-e992-4218-a052-5e1733171671",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ "生产" ]
+  },
+  "name" : "FilebeatfromKafka2e13aa83-3112-492d-bcb2-6e808c804e3e",
+  "sdcVersion" : "3.1.0.0",
+  "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion" : 3,
+  "version" : 2,
+  "metricsRuleDefinitions" : [ {
+    "id" : "badRecordsAlertID",
+    "alertText" : "High incidence of Error Records",
+    "metricId" : "pipeline.batchErrorRecords.counter",
+    "metricType" : "COUNTER",
+    "metricElement" : "COUNTER_COUNT",
+    "condition" : "${value() > 100}",
+    "sendEmail" : false,
+    "enabled" : false,
+    "timestamp" : 1521617813513,
+    "valid" : true
+  }, {
+    "id" : "stageErrorAlertID",
+    "alertText" : "High incidence of Stage Errors",
+    "metricId" : "pipeline.batchErrorMessages.counter",
+    "metricType" : "COUNTER",
+    "metricElement" : "COUNTER_COUNT",
+    "condition" : "${value() > 100}",
+    "sendEmail" : false,
+    "enabled" : false,
+    "timestamp" : 1521617813513,
+    "valid" : true
+  }, {
+    "id" : "idleGaugeID",
+    "alertText" : "Pipeline is Idle",
+    "metricId" : "RuntimeStatsGauge.gauge",
+    "metricType" : "GAUGE",
+    "metricElement" : "TIME_OF_LAST_RECEIVED_RECORD",
+    "condition" : "${time:now() - value() > 120000}",
+    "sendEmail" : false,
+    "enabled" : false,
+    "timestamp" : 1521617813513,
+    "valid" : true
+  }, {
+    "id" : "batchTimeAlertID",
+    "alertText" : "Batch taking more time to process",
+    "metricId" : "RuntimeStatsGauge.gauge",
+    "metricType" : "GAUGE",
+    "metricElement" : "CURRENT_BATCH_AGE",
+    "condition" : "${value() > 200}",
+    "sendEmail" : false,
+    "enabled" : false,
+    "timestamp" : 1521617813513,
+    "valid" : true
+  }, {
+    "id" : "memoryLimitAlertID",
+    "alertText" : "Memory limit for pipeline exceeded",
+    "metricId" : "pipeline.memoryConsumed.counter",
+    "metricType" : "COUNTER",
+    "metricElement" : "COUNTER_COUNT",
+    "condition" : "${value() > (jvm:maxMemoryMB() * 0.65)}",
+    "sendEmail" : false,
+    "enabled" : false,
+    "timestamp" : 1521617813513,
+    "valid" : true
+  } ],
+  "dataRuleDefinitions" : [ ],
+  "driftRuleDefinitions" : [ ],
+  "uuid" : "8c3f7b43-f722-4819-8e0c-483626dd1cab",
+  "configuration" : [ {
+    "name" : "emailIDs",
+    "value" : [ ]
+  }, {
+    "name" : "webhookConfigs",
+    "value" : [ ]
+  } ],
+  "ruleIssues" : null,
+  "configIssues" : null
+}

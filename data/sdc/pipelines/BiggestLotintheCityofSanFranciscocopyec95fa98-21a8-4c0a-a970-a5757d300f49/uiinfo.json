@@ -1,0 +1,55 @@
+{
+  "Directory_01" : {
+    "yPos" : 47.580711364746094,
+    "stageType" : "SOURCE",
+    "rawSource" : {
+      "configuration" : [ {
+        "name" : "fileName",
+        "value" : "/home/zhanyl/sdc/data/sf-city-lots-json/citylots.json"
+      } ]
+    },
+    "description" : "",
+    "label" : "Directory 1",
+    "xPos" : 61.25
+  },
+  "Elasticsearch_01" : {
+    "description" : "",
+    "label" : "Elasticsearch 1",
+    "xPos" : 721.2096557617188,
+    "yPos" : 40,
+    "stageType" : "TARGET"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : 10,
+      "timeout" : 10000,
+      "writeToDestinations" : false,
+      "executeLifecycleEvents" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "StreamSelector_01" : {
+    "description" : "",
+    "label" : "Stream Selector 1",
+    "xPos" : 280,
+    "yPos" : 110,
+    "stageType" : "PROCESSOR"
+  },
+  "JavaScriptEvaluator_01" : {
+    "description" : "",
+    "label" : "JavaScript Evaluator 1",
+    "xPos" : 500,
+    "yPos" : 38.790321350097656,
+    "stageType" : "PROCESSOR"
+  },
+  "Trash_01" : {
+    "description" : "",
+    "label" : "Trash 1",
+    "xPos" : 500,
+    "yPos" : 170,
+    "stageType" : "TARGET"
+  }
+}

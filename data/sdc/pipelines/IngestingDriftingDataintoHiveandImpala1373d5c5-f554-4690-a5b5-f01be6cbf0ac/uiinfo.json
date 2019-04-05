@@ -1,0 +1,28 @@
+{
+  "Elasticsearch_01" : {
+    "description" : "",
+    "label" : "Elasticsearch 1",
+    "xPos" : 280,
+    "yPos" : 50,
+    "stageType" : "TARGET"
+  },
+  "JDBCQueryConsumer_01" : {
+    "description" : "",
+    "label" : "JDBC Query Consumer 1",
+    "xPos" : 60,
+    "yPos" : 50,
+    "stageType" : "SOURCE"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : 10,
+      "timeout" : 10000,
+      "writeToDestinations" : false,
+      "executeLifecycleEvents" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  }
+}

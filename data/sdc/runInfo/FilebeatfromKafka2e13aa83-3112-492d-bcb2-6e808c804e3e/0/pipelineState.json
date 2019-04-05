@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "FilebeatfromKafka2e13aa83-3112-492d-bcb2-6e808c804e3e",
+  "rev" : "0",
+  "user" : "admin",
+  "status" : "RUNNING",
+  "message" : null,
+  "timeStamp" : 1552699299378,
+  "attributes" : {
+    "IS_REMOTE_PIPELINE" : false,
+    "RUNTIME_PARAMETERS" : null,
+    "INTERCEPTOR_CONFIGS" : [ ]
+  },
+  "executionMode" : "STANDALONE",
+  "metrics" : null,
+  "retryAttempt" : 0,
+  "nextRetryTimeStamp" : 0,
+  "name" : "FilebeatfromKafka2e13aa83-3112-492d-bcb2-6e808c804e3e"
+}

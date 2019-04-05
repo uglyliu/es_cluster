@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "LogShippingintoElasticsearchef83fdcc-a1e0-4b21-ba7b-95ac790ec061",
+  "title" : "Log Shipping into Elasticsearch",
+  "description" : "Log Shipping into Elasticsearch",
+  "created" : 1525918331710,
+  "lastModified" : 1537441148056,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "a1852d7e-29fb-4162-a271-6332e04910a4",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ "tutorial-1" ]
+  },
+  "name" : "LogShippingintoElasticsearchef83fdcc-a1e0-4b21-ba7b-95ac790ec061",
+  "sdcVersion" : "3.1.0.0",
+  "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+}

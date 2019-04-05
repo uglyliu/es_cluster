@@ -1,0 +1,21 @@
+{
+  "resourceId" : "FilebeatfromKafka2e13aa83-3112-492d-bcb2-6e808c804e3e",
+  "resourceOwner" : "admin",
+  "resourceCreatedTime" : 1527605684821,
+  "resourceType" : "PIPELINE",
+  "lastModifiedBy" : "admin",
+  "lastModifiedOn" : 1527989140083,
+  "permissions" : [ {
+    "subjectId" : "admin",
+    "subjectType" : "USER",
+    "lastModifiedBy" : "admin",
+    "lastModifiedOn" : 1527605684821,
+    "actions" : [ "READ", "WRITE", "EXECUTE" ]
+  }, {
+    "subjectId" : "guest",
+    "subjectType" : "USER",
+    "lastModifiedBy" : null,
+    "lastModifiedOn" : 0,
+    "actions" : [ "READ" ]
+  } ]
+}

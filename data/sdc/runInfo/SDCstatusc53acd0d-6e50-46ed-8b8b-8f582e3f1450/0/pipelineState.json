@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "SDCstatusc53acd0d-6e50-46ed-8b8b-8f582e3f1450",
+  "rev" : "0",
+  "user" : "admin",
+  "status" : "RUNNING",
+  "message" : null,
+  "timeStamp" : 1552699267346,
+  "attributes" : {
+    "IS_REMOTE_PIPELINE" : false,
+    "RUNTIME_PARAMETERS" : null,
+    "INTERCEPTOR_CONFIGS" : [ ]
+  },
+  "executionMode" : "STANDALONE",
+  "metrics" : null,
+  "retryAttempt" : 0,
+  "nextRetryTimeStamp" : 0,
+  "name" : "SDCstatusc53acd0d-6e50-46ed-8b8b-8f582e3f1450"
+}

@@ -1,0 +1,66 @@
+{
+  "com_streamsets_pipeline_stage_processor_jython_JythonDProcessor_1" : {
+    "description" : "",
+    "yPos" : 50,
+    "xPos" : 503.0181884765625,
+    "label" : "Jython Evaluator 1",
+    "stageType" : "PROCESSOR"
+  },
+  "KafkaConsumer_01" : {
+    "yPos" : 48.33317565917969,
+    "stageType" : "SOURCE",
+    "rawSource" : {
+      "configuration" : [ {
+        "name" : "brokerHost",
+        "value" : "localhost"
+      }, {
+        "name" : "brokerPort",
+        "value" : 9092
+      }, {
+        "name" : "topic",
+        "value" : "myTopic"
+      }, {
+        "name" : "partition",
+        "value" : 0
+      }, {
+        "name" : "maxWaitTime",
+        "value" : 1000
+      } ]
+    },
+    "description" : "",
+    "label" : "Kafka Consumer 1",
+    "xPos" : 60
+  },
+  "Elasticsearch_01" : {
+    "description" : "",
+    "label" : "Elasticsearch 1",
+    "xPos" : 940,
+    "yPos" : 48.99090576171875,
+    "stageType" : "TARGET"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : 10,
+      "timeout" : 10000,
+      "writeToDestinations" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "com_streamsets_pipeline_stage_processor_fieldtypeconverter_FieldTypeConverterDProcessor_1" : {
+    "description" : "",
+    "yPos" : 48.99090576171875,
+    "xPos" : 280,
+    "label" : "Field Converter 1",
+    "stageType" : "PROCESSOR"
+  },
+  "com_streamsets_pipeline_stage_processor_fieldmask_FieldMaskDProcessor_1" : {
+    "description" : "",
+    "yPos" : 50,
+    "xPos" : 720,
+    "label" : "Field Masker 1",
+    "stageType" : "PROCESSOR"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "appName": "elastalert-server",
+  "port": 3030,
+  "elastalertPath": "/home/zhanyl/software/elastalert",
+  "elastalertConfigPath": "/home/zhanyl/conf/elastalert/config.yaml",
+  "elastalertTestPath": "/home/zhanyl/conf/elastalert/config-test.yaml",
+  "verbose": true,
+  "es_debug": false,
+  "debug": false,
+  "rulesPath": {
+    "relative": false,
+    "path": "/home/zhanyl/conf/elastalert/rules"
+  },
+  "templatesPath": {
+    "relative": false,
+    "path": "/home/zhanyl/conf/elastalert/rule_templates"
+  },
+  "es_host": "localhost",
+  "es_port": 9200,
+  "writeback_index": "elastalert_status"
+}

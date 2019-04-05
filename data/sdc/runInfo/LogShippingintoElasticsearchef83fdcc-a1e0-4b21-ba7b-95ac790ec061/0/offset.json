@@ -1,0 +1,7 @@
+{
+  "version" : 2,
+  "offsets" : {
+    "access_log_20151221-101606.log.gz" : "{\"POS\":\"886092\"}",
+    "$com.streamsets.pipeline.stage.origin.spooldir.SpoolDirSource.offset.version$" : "1"
+  }
+}

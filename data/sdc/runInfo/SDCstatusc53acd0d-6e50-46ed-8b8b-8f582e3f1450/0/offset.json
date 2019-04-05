@@ -1,0 +1,6 @@
+{
+  "version" : 2,
+  "offsets" : {
+    "$com.streamsets.datacollector.pollsource.offset$" : "url::http://localhost:18630/rest/v1/pipelines/status::params::e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855::time::1552699508301::startAt::0"
+  }
+}

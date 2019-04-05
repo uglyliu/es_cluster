@@ -1,0 +1,17 @@
+{
+  "pipelineId" : "ReadCSVfromLocalDirectorydec75e80-21d9-4bb6-8bde-55c1c8f0a6be",
+  "rev" : "0",
+  "user" : "admin",
+  "status" : "EDITED",
+  "message" : "Pipeline edited",
+  "timeStamp" : 1537440982057,
+  "attributes" : {
+    "IS_REMOTE_PIPELINE" : false,
+    "RUNTIME_PARAMETERS" : null
+  },
+  "executionMode" : "STANDALONE",
+  "metrics" : null,
+  "retryAttempt" : 0,
+  "nextRetryTimeStamp" : 0,
+  "name" : "ReadCSVfromLocalDirectorydec75e80-21d9-4bb6-8bde-55c1c8f0a6be"
+}

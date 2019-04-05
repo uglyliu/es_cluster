@@ -1,0 +1,17 @@
+{
+  "pipelineId" : "BiggestLotintheCityofSanFranciscocopyec95fa98-21a8-4c0a-a970-a5757d300f49",
+  "rev" : "0",
+  "user" : "admin",
+  "status" : "EDITED",
+  "message" : "Pipeline edited",
+  "timeStamp" : 1526454216007,
+  "attributes" : {
+    "IS_REMOTE_PIPELINE" : false,
+    "RUNTIME_PARAMETERS" : null
+  },
+  "executionMode" : "STANDALONE",
+  "metrics" : null,
+  "retryAttempt" : 0,
+  "nextRetryTimeStamp" : 0,
+  "name" : "BiggestLotintheCityofSanFranciscocopyec95fa98-21a8-4c0a-a970-a5757d300f49"
+}

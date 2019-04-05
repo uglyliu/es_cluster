@@ -1,0 +1,25 @@
+- module: http
+  metricsets: ["json"]
+  period: 10s
+  hosts: ["http://localhost:18630"]
+  namespace: "status"
+  username: "admin"
+  password: "admin"
+  path: "/rest/v1/pipeline/BiggestLotintheCityofSanFranciscocopyec95fa98-21a8-4c0a-a970-a5757d300f49/status"
+  #body: ""
+  method: "GET"
+  request.enabled: true
+  response.enabled: true
+  dedot.enabled: true
+  #json.is_array: true
+
+  #- module: http
+  #metricsets: ["server"]
+  #host: "localhost"
+  #port: "18630"
+  #enabled: false
+  #paths:
+  #  - path: "/rest/v1/pipelines/status"
+  #    namespace: "status"
+#      fields: # added to the the response in root. overwrites existing fields
+#        key: "value"

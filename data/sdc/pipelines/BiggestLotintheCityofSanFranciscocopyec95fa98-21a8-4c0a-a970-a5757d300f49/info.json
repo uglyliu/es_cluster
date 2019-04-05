@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "BiggestLotintheCityofSanFranciscocopyec95fa98-21a8-4c0a-a970-a5757d300f49",
+  "title" : "Biggest Lot in the City of San Francisco",
+  "description" : "",
+  "created" : 1525943417829,
+  "lastModified" : 1526454215983,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "1a9cf38b-46cf-43b8-98ee-7a33329b945a",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ null, "tutorial-3" ]
+  },
+  "name" : "BiggestLotintheCityofSanFranciscocopyec95fa98-21a8-4c0a-a970-a5757d300f49",
+  "sdcVersion" : "3.1.0.0",
+  "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+}

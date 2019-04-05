@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "ReadingfromaKafkaConsumer8e8da9bf-6088-4dd0-98fa-e1d914598ac6",
+  "title" : "Reading from a Kafka Consumer",
+  "description" : "Reading from a Kafka Consumer",
+  "created" : 1525939186573,
+  "lastModified" : 1537442724503,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "379b865a-4a4e-4de9-abd1-bd8650661da5",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ "tutorial-2" ]
+  },
+  "name" : "ReadingfromaKafkaConsumer8e8da9bf-6088-4dd0-98fa-e1d914598ac6",
+  "sdcVersion" : "3.1.0.0",
+  "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+}

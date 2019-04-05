@@ -1,0 +1,631 @@
+{
+  "schemaVersion" : 5,
+  "version" : 8,
+  "pipelineId" : "BiggestLotintheCityofSanFranciscocopyec95fa98-21a8-4c0a-a970-a5757d300f49",
+  "title" : "Biggest Lot in the City of San Francisco",
+  "description" : "",
+  "uuid" : "1a9cf38b-46cf-43b8-98ee-7a33329b945a",
+  "configuration" : [ {
+    "name" : "executionMode",
+    "value" : "STANDALONE"
+  }, {
+    "name" : "deliveryGuarantee",
+    "value" : "AT_LEAST_ONCE"
+  }, {
+    "name" : "startEventStage",
+    "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+  }, {
+    "name" : "stopEventStage",
+    "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+  }, {
+    "name" : "shouldRetry",
+    "value" : true
+  }, {
+    "name" : "retryAttempts",
+    "value" : -1
+  }, {
+    "name" : "memoryLimit",
+    "value" : "${jvm:maxMemoryMB() * 0.85}"
+  }, {
+    "name" : "memoryLimitExceeded",
+    "value" : "LOG"
+  }, {
+    "name" : "notifyOnStates",
+    "value" : [ "RUN_ERROR", "STOPPED", "FINISHED" ]
+  }, {
+    "name" : "emailIDs",
+    "value" : [ ]
+  }, {
+    "name" : "constants",
+    "value" : [ ]
+  }, {
+    "name" : "badRecordsHandling",
+    "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_recordstolocalfilesystem_ToErrorLocalFSDTarget::1"
+  }, {
+    "name" : "errorRecordPolicy",
+    "value" : "ORIGINAL_RECORD"
+  }, {
+    "name" : "workerCount",
+    "value" : 0
+  }, {
+    "name" : "clusterSlaveMemory",
+    "value" : 2048
+  }, {
+    "name" : "clusterSlaveJavaOpts",
+    "value" : "-XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dlog4j.debug"
+  }, {
+    "name" : "clusterLauncherEnv",
+    "value" : [ ]
+  }, {
+    "name" : "mesosDispatcherURL",
+    "value" : null
+  }, {
+    "name" : "hdfsS3ConfDir",
+    "value" : null
+  }, {
+    "name" : "rateLimit",
+    "value" : 0
+  }, {
+    "name" : "maxRunners",
+    "value" : 0
+  }, {
+    "name" : "shouldCreateFailureSnapshot",
+    "value" : true
+  }, {
+    "name" : "webhookConfigs",
+    "value" : [ ]
+  }, {
+    "name" : "sparkConfigs",
+    "value" : [ ]
+  }, {
+    "name" : "statsAggregatorStage",
+    "value" : ""
+  } ],
+  "uiInfo" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : 10,
+      "timeout" : 10000,
+      "writeToDestinations" : false,
+      "executeLifecycleEvents" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "stages" : [ {
+    "instanceName" : "Directory_01",
+    "library" : "streamsets-datacollector-basic-lib",
+    "stageName" : "com_streamsets_pipeline_stage_origin_spooldir_SpoolDirDSource",
+    "stageVersion" : "9",
+    "configuration" : [ {
+      "name" : "conf.dataFormatConfig.compression",
+      "value" : "NONE"
+    }, {
+      "name" : "conf.dataFormatConfig.filePatternInArchive",
+      "value" : "*"
+    }, {
+      "name" : "conf.dataFormatConfig.charset",
+      "value" : "UTF-8"
+    }, {
+      "name" : "conf.dataFormatConfig.removeCtrlChars",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.textMaxLineLen",
+      "value" : 1024
+    }, {
+      "name" : "conf.dataFormatConfig.useCustomDelimiter",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.customDelimiter",
+      "value" : "\\r\\n"
+    }, {
+      "name" : "conf.dataFormatConfig.includeCustomDelimiterInTheText",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.jsonContent",
+      "value" : "ARRAY_OBJECTS"
+    }, {
+      "name" : "conf.dataFormatConfig.jsonMaxObjectLen",
+      "value" : 1024000
+    }, {
+      "name" : "conf.dataFormatConfig.csvFileFormat",
+      "value" : "CSV"
+    }, {
+      "name" : "conf.dataFormatConfig.csvHeader",
+      "value" : "NO_HEADER"
+    }, {
+      "name" : "conf.dataFormatConfig.csvAllowExtraColumns",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.csvExtraColumnPrefix",
+      "value" : "_extra_"
+    }, {
+      "name" : "conf.dataFormatConfig.csvMaxObjectLen",
+      "value" : 1024
+    }, {
+      "name" : "conf.dataFormatConfig.csvCustomDelimiter",
+      "value" : "|"
+    }, {
+      "name" : "conf.dataFormatConfig.csvCustomEscape",
+      "value" : "\\"
+    }, {
+      "name" : "conf.dataFormatConfig.csvCustomQuote",
+      "value" : "\""
+    }, {
+      "name" : "conf.dataFormatConfig.csvEnableComments",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.csvCommentMarker",
+      "value" : "#"
+    }, {
+      "name" : "conf.dataFormatConfig.csvIgnoreEmptyLines",
+      "value" : true
+    }, {
+      "name" : "conf.dataFormatConfig.csvRecordType",
+      "value" : "LIST_MAP"
+    }, {
+      "name" : "conf.dataFormatConfig.csvSkipStartLines",
+      "value" : 0
+    }, {
+      "name" : "conf.dataFormatConfig.parseNull",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.nullConstant",
+      "value" : "\\\\N"
+    }, {
+      "name" : "conf.dataFormatConfig.xmlRecordElement",
+      "value" : null
+    }, {
+      "name" : "conf.dataFormatConfig.includeFieldXpathAttributes",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.xPathNamespaceContext",
+      "value" : [ ]
+    }, {
+      "name" : "conf.dataFormatConfig.outputFieldAttributes",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.xmlMaxObjectLen",
+      "value" : 4096
+    }, {
+      "name" : "conf.dataFormatConfig.logMode",
+      "value" : "COMMON_LOG_FORMAT"
+    }, {
+      "name" : "conf.dataFormatConfig.logMaxObjectLen",
+      "value" : 1024
+    }, {
+      "name" : "conf.dataFormatConfig.retainOriginalLine",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.customLogFormat",
+      "value" : "%h %l %u %t \"%r\" %>s %b"
+    }, {
+      "name" : "conf.dataFormatConfig.regex",
+      "value" : "^(\\S+) (\\S+) (\\S+) \\[([\\w:/]+\\s[+\\-]\\d{4})\\] \"(\\S+) (\\S+) (\\S+)\" (\\d{3}) (\\d+)"
+    }, {
+      "name" : "conf.dataFormatConfig.fieldPathsToGroupName",
+      "value" : [ {
+        "fieldPath" : "/",
+        "group" : 1
+      } ]
+    }, {
+      "name" : "conf.dataFormatConfig.grokPatternDefinition",
+      "value" : null
+    }, {
+      "name" : "conf.dataFormatConfig.grokPattern",
+      "value" : "%{COMMONAPACHELOG}"
+    }, {
+      "name" : "conf.dataFormatConfig.onParseError",
+      "value" : "ERROR"
+    }, {
+      "name" : "conf.dataFormatConfig.maxStackTraceLines",
+      "value" : 50
+    }, {
+      "name" : "conf.dataFormatConfig.enableLog4jCustomLogFormat",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.log4jCustomLogFormat",
+      "value" : "%r [%t] %-5p %c %x - %m%n"
+    }, {
+      "name" : "conf.dataFormatConfig.avroSchema",
+      "value" : null
+    }, {
+      "name" : "conf.dataFormatConfig.schemaRegistryUrls",
+      "value" : [ ]
+    }, {
+      "name" : "conf.dataFormatConfig.schemaLookupMode",
+      "value" : "SUBJECT"
+    }, {
+      "name" : "conf.dataFormatConfig.subject",
+      "value" : null
+    }, {
+      "name" : "conf.dataFormatConfig.schemaId",
+      "value" : null
+    }, {
+      "name" : "conf.dataFormatConfig.protoDescriptorFile",
+      "value" : null
+    }, {
+      "name" : "conf.dataFormatConfig.messageType",
+      "value" : null
+    }, {
+      "name" : "conf.dataFormatConfig.isDelimited",
+      "value" : true
+    }, {
+      "name" : "conf.dataFormatConfig.binaryMaxObjectLen",
+      "value" : 1024
+    }, {
+      "name" : "conf.dataFormatConfig.datagramMode",
+      "value" : "SYSLOG"
+    }, {
+      "name" : "conf.dataFormatConfig.typesDbPath",
+      "value" : null
+    }, {
+      "name" : "conf.dataFormatConfig.convertTime",
+      "value" : false
+    }, {
+      "name" : "conf.dataFormatConfig.excludeInterval",
+      "value" : true
+    }, {
+      "name" : "conf.dataFormatConfig.authFilePath",
+      "value" : null
+    }, {
+      "name" : "conf.dataFormatConfig.netflowOutputValuesMode",
+      "value" : "RAW_AND_INTERPRETED"
+    }, {
+      "name" : "conf.dataFormatConfig.maxTemplateCacheSize",
+      "value" : -1
+    }, {
+      "name" : "conf.dataFormatConfig.templateCacheTimeoutMs",
+      "value" : -1
+    }, {
+      "name" : "conf.dataFormatConfig.netflowOutputValuesModeDatagram",
+      "value" : "RAW_AND_INTERPRETED"
+    }, {
+      "name" : "conf.dataFormatConfig.maxTemplateCacheSizeDatagram",
+      "value" : -1
+    }, {
+      "name" : "conf.dataFormatConfig.templateCacheTimeoutMsDatagram",
+      "value" : -1
+    }, {
+      "name" : "conf.dataFormatConfig.wholeFileMaxObjectLen",
+      "value" : 8192
+    }, {
+      "name" : "conf.dataFormatConfig.rateLimit",
+      "value" : "-1"
+    }, {
+      "name" : "conf.dataFormat",
+      "value" : "JSON"
+    }, {
+      "name" : "conf.spoolDir",
+      "value" : "/home/zhanyl/sdc/data/sf-city-lots-json"
+    }, {
+      "name" : "conf.numberOfThreads",
+      "value" : 1
+    }, {
+      "name" : "conf.pathMatcherMode",
+      "value" : "GLOB"
+    }, {
+      "name" : "conf.filePattern",
+      "value" : "citylots.json"
+    }, {
+      "name" : "conf.useLastModified",
+      "value" : "LEXICOGRAPHICAL"
+    }, {
+      "name" : "conf.processSubdirectories",
+      "value" : false
+    }, {
+      "name" : "conf.allowLateDirectory",
+      "value" : false
+    }, {
+      "name" : "conf.overrunLimit",
+      "value" : 1024
+    }, {
+      "name" : "conf.batchSize",
+      "value" : 1000
+    }, {
+      "name" : "conf.poolingTimeoutSecs",
+      "value" : 60
+    }, {
+      "name" : "conf.maxSpoolFiles",
+      "value" : 1000
+    }, {
+      "name" : "conf.initialFileToProcess",
+      "value" : null
+    }, {
+      "name" : "conf.errorArchiveDir",
+      "value" : null
+    }, {
+      "name" : "conf.postProcessing",
+      "value" : "NONE"
+    }, {
+      "name" : "conf.archiveDir",
+      "value" : null
+    }, {
+      "name" : "conf.retentionTimeMins",
+      "value" : 0
+    }, {
+      "name" : "stageOnRecordError",
+      "value" : "TO_ERROR"
+    } ],
+    "uiInfo" : {
+      "yPos" : 47.580711364746094,
+      "stageType" : "SOURCE",
+      "rawSource" : {
+        "configuration" : [ {
+          "name" : "fileName",
+          "value" : "/home/zhanyl/sdc/data/sf-city-lots-json/citylots.json"
+        } ]
+      },
+      "description" : "",
+      "label" : "Directory 1",
+      "xPos" : 61.25
+    },
+    "inputLanes" : [ ],
+    "outputLanes" : [ "Directory_01OutputLane15216107043460" ],
+    "eventLanes" : [ ],
+    "services" : [ ]
+  }, {
+    "instanceName" : "StreamSelector_01",
+    "library" : "streamsets-datacollector-basic-lib",
+    "stageName" : "com_streamsets_pipeline_stage_processor_selector_SelectorDProcessor",
+    "stageVersion" : "1",
+    "configuration" : [ {
+      "name" : "lanePredicates",
+      "value" : [ {
+        "outputLane" : "StreamSelector_01OutputLane1521613928878",
+        "predicate" : "${record:value('/geometry') != null}"
+      }, {
+        "outputLane" : "StreamSelector_01OutputLane1521613888812",
+        "predicate" : "default"
+      } ]
+    }, {
+      "name" : "stageOnRecordError",
+      "value" : "TO_ERROR"
+    }, {
+      "name" : "stageRequiredFields",
+      "value" : [ ]
+    }, {
+      "name" : "stageRecordPreconditions",
+      "value" : [ ]
+    } ],
+    "uiInfo" : {
+      "description" : "",
+      "label" : "Stream Selector 1",
+      "xPos" : 280,
+      "yPos" : 110,
+      "stageType" : "PROCESSOR"
+    },
+    "inputLanes" : [ "Directory_01OutputLane15216107043460" ],
+    "outputLanes" : [ "StreamSelector_01OutputLane1521613928878", "StreamSelector_01OutputLane1521613888812" ],
+    "eventLanes" : [ ],
+    "services" : [ ]
+  }, {
+    "instanceName" : "JavaScriptEvaluator_01",
+    "library" : "streamsets-datacollector-basic-lib",
+    "stageName" : "com_streamsets_pipeline_stage_processor_javascript_JavaScriptDProcessor",
+    "stageVersion" : "2",
+    "configuration" : [ {
+      "name" : "processingMode",
+      "value" : "BATCH"
+    }, {
+      "name" : "initScript",
+      "value" : "/**\n * Available Objects:\n * \n *  state: a dict that is preserved between invocations of this script. \n *        Useful for caching bits of data e.g. counters and long-lived resources.\n *\n *  log.<loglevel>(msg, obj...): use instead of print to send log messages to the log4j log instead of stdout.\n *                               loglevel is any log4j level: e.g. info, error, warn, trace.\n *   sdcFunctions.getFieldNull(Record, 'field path'): Receive a constant defined above \n *                          to check if the field is typed field with value null\n *   sdcFunctions.createMap(boolean listMap): Create a map for use as a field in a record. \n *                          Pass true to this function to create a list map (ordered map)\n */\n\n// state['connection'] = new Connection().open();"
+    }, {
+      "name" : "script",
+      "value" : "function degreesToRadians(input) {\n   return input * Math.PI / 180;\n }\n\n for(var i = 0; i < records.length; i++) {\n   try {\n     // Normalize the input data so that polygons look like multipolygons\n     var polygons = (records[i].value.geometry.type === 'Polygon')\n         ? [records[i].value.geometry.coordinates]\n         : records[i].value.geometry.coordinates;\n\n     // Area calculation code based on Tim Schaub's answer at \n     // http://gis.stackexchange.com/a/816\n     var area = 0.0;\n\n     for (var j=0; j < polygons.length; j++) {\n         var coordinates = polygons[j][0];\n         if (coordinates.length > 2) {\n             var p1, p2;\n             for (var k = 0; k < coordinates.length - 1; k++) {\n                 p1 = coordinates[k];\n                 p2 = coordinates[k+1];\n                 area += degreesToRadians(p2[0] - p1[0]) *\n                     (2 + Math.sin(degreesToRadians(p1[1])) +\n                     Math.sin(degreesToRadians(p2[1])));\n             }\n         }\n\n     }\n\n     // Use the flat properties - lose the coordinates etc\n     records[i].value = records[i].value.properties;\n     records[i].value.AREA = area * 6378137.0 * 6378137.0 / 2.0;\n\n     // Write record to processor output\n     output.write(records[i]);\n   } catch (e) {\n     // Send record to error\n     error.write(records[i], e);\n   }\n }"
+    }, {
+      "name" : "destroyScript",
+      "value" : "/**\n * Available Objects:\n * \n *  state: a dict that is preserved between invocations of this script. \n *        Useful for caching bits of data e.g. counters and long-lived resources.\n *\n *  log.<loglevel>(msg, obj...): use instead of print to send log messages to the log4j log instead of stdout.\n *                               loglevel is any log4j level: e.g. info, error, warn, trace.\n *   sdcFunctions.getFieldNull(Record, 'field path'): Receive a constant defined above \n *                          to check if the field is typed field with value null\n *   sdcFunctions.createMap(boolean listMap): Create a map for use as a field in a record. \n *                          Pass true to this function to create a list map (ordered map)\n *   sdcFunctions.createEvent(String type, int version): Creates a new event.\n *                          Create new empty event with standard headers.\n *   sdcFunctions.toEvent(Record): Send event to event stream\n *                          Only events created with sdcFunctions.createEvent are supported.\n */\n\n// state['connection'].close();"
+    }, {
+      "name" : "stageOnRecordError",
+      "value" : "TO_ERROR"
+    }, {
+      "name" : "stageRequiredFields",
+      "value" : [ ]
+    }, {
+      "name" : "stageRecordPreconditions",
+      "value" : [ ]
+    } ],
+    "uiInfo" : {
+      "description" : "",
+      "label" : "JavaScript Evaluator 1",
+      "xPos" : 500,
+      "yPos" : 38.790321350097656,
+      "stageType" : "PROCESSOR"
+    },
+    "inputLanes" : [ "StreamSelector_01OutputLane1521613928878" ],
+    "outputLanes" : [ "JavaScriptEvaluator_01OutputLane15216116148380" ],
+    "eventLanes" : [ ],
+    "services" : [ ]
+  }, {
+    "instanceName" : "Elasticsearch_01",
+    "library" : "streamsets-datacollector-elasticsearch_5-lib",
+    "stageName" : "com_streamsets_pipeline_stage_destination_elasticsearch_ElasticSearchDTarget",
+    "stageVersion" : "8",
+    "configuration" : [ {
+      "name" : "elasticSearchConfig.timeDriver",
+      "value" : "${time:now()}"
+    }, {
+      "name" : "elasticSearchConfig.timeZoneID",
+      "value" : "UTC"
+    }, {
+      "name" : "elasticSearchConfig.indexTemplate",
+      "value" : "biglot"
+    }, {
+      "name" : "elasticSearchConfig.typeTemplate",
+      "value" : "doc"
+    }, {
+      "name" : "elasticSearchConfig.docIdTemplate",
+      "value" : null
+    }, {
+      "name" : "elasticSearchConfig.parentIdTemplate",
+      "value" : null
+    }, {
+      "name" : "elasticSearchConfig.routingTemplate",
+      "value" : null
+    }, {
+      "name" : "elasticSearchConfig.charset",
+      "value" : "UTF-8"
+    }, {
+      "name" : "elasticSearchConfig.defaultOperation",
+      "value" : "INDEX"
+    }, {
+      "name" : "elasticSearchConfig.unsupportedAction",
+      "value" : "DISCARD"
+    }, {
+      "name" : "elasticSearchConfig.securityConfig.securityUser",
+      "value" : "elastic:zylelk"
+    }, {
+      "name" : "elasticSearchConfig.securityConfig.sslTrustStorePath",
+      "value" : null
+    }, {
+      "name" : "elasticSearchConfig.securityConfig.sslTrustStorePassword",
+      "value" : null
+    }, {
+      "name" : "elasticSearchConfig.httpUris",
+      "value" : [ "75.75.75.101:9200" ]
+    }, {
+      "name" : "elasticSearchConfig.params",
+      "value" : [ ]
+    }, {
+      "name" : "elasticSearchConfig.clientSniff",
+      "value" : false
+    }, {
+      "name" : "elasticSearchConfig.useSecurity",
+      "value" : true
+    }, {
+      "name" : "stageOnRecordError",
+      "value" : "TO_ERROR"
+    }, {
+      "name" : "stageRequiredFields",
+      "value" : [ ]
+    }, {
+      "name" : "stageRecordPreconditions",
+      "value" : [ ]
+    } ],
+    "uiInfo" : {
+      "description" : "",
+      "label" : "Elasticsearch 1",
+      "xPos" : 721.2096557617188,
+      "yPos" : 40,
+      "stageType" : "TARGET"
+    },
+    "inputLanes" : [ "JavaScriptEvaluator_01OutputLane15216116148380" ],
+    "outputLanes" : [ ],
+    "eventLanes" : [ ],
+    "services" : [ ]
+  }, {
+    "instanceName" : "Trash_01",
+    "library" : "streamsets-datacollector-basic-lib",
+    "stageName" : "com_streamsets_pipeline_stage_destination_devnull_NullDTarget",
+    "stageVersion" : "1",
+    "configuration" : [ ],
+    "uiInfo" : {
+      "description" : "",
+      "label" : "Trash 1",
+      "xPos" : 500,
+      "yPos" : 170,
+      "stageType" : "TARGET"
+    },
+    "inputLanes" : [ "StreamSelector_01OutputLane1521613888812" ],
+    "outputLanes" : [ ],
+    "eventLanes" : [ ],
+    "services" : [ ]
+  } ],
+  "errorStage" : {
+    "instanceName" : "WritetoFile_ErrorStage",
+    "library" : "streamsets-datacollector-basic-lib",
+    "stageName" : "com_streamsets_pipeline_stage_destination_recordstolocalfilesystem_ToErrorLocalFSDTarget",
+    "stageVersion" : "1",
+    "configuration" : [ {
+      "name" : "directory",
+      "value" : "/home/zhanyl/sdc/log"
+    }, {
+      "name" : "uniquePrefix",
+      "value" : "sdc-${sdc:id()}"
+    }, {
+      "name" : "rotationIntervalSecs",
+      "value" : "${1 * HOURS}"
+    }, {
+      "name" : "maxFileSizeMbs",
+      "value" : 512
+    } ],
+    "uiInfo" : {
+      "description" : "",
+      "label" : "Error Records - Write to File",
+      "xPos" : 311,
+      "yPos" : 50,
+      "stageType" : "TARGET"
+    },
+    "inputLanes" : [ ],
+    "outputLanes" : [ ],
+    "eventLanes" : [ ],
+    "services" : [ ]
+  },
+  "info" : {
+    "pipelineId" : "BiggestLotintheCityofSanFranciscocopyec95fa98-21a8-4c0a-a970-a5757d300f49",
+    "title" : "Biggest Lot in the City of San Francisco",
+    "description" : "",
+    "created" : 1525943417829,
+    "lastModified" : 1525943529468,
+    "creator" : "admin",
+    "lastModifier" : "admin",
+    "lastRev" : "0",
+    "uuid" : "6d31a72a-1a47-4255-8a93-7b12329086e9",
+    "valid" : true,
+    "metadata" : {
+      "labels" : [ null, "tutorial-3" ]
+    },
+    "name" : "BiggestLotintheCityofSanFranciscocopyec95fa98-21a8-4c0a-a970-a5757d300f49",
+    "sdcVersion" : "3.1.0.0",
+    "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+  },
+  "metadata" : {
+    "labels" : [ null, "tutorial-3" ]
+  },
+  "statsAggregatorStage" : null,
+  "startEventStages" : [ {
+    "instanceName" : "Discard_StartEventStage",
+    "library" : "streamsets-datacollector-basic-lib",
+    "stageName" : "com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget",
+    "stageVersion" : "1",
+    "configuration" : [ ],
+    "uiInfo" : {
+      "description" : "",
+      "label" : "Start Event - Discard",
+      "xPos" : 311,
+      "yPos" : 50,
+      "stageType" : "TARGET"
+    },
+    "inputLanes" : [ ],
+    "outputLanes" : [ ],
+    "eventLanes" : [ ],
+    "services" : [ ]
+  } ],
+  "stopEventStages" : [ {
+    "instanceName" : "Discard_StopEventStage",
+    "library" : "streamsets-datacollector-basic-lib",
+    "stageName" : "com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget",
+    "stageVersion" : "1",
+    "configuration" : [ ],
+    "uiInfo" : {
+      "description" : "",
+      "label" : "Stop Event - Discard",
+      "xPos" : 311,
+      "yPos" : 50,
+      "stageType" : "TARGET"
+    },
+    "inputLanes" : [ ],
+    "outputLanes" : [ ],
+    "eventLanes" : [ ],
+    "services" : [ ]
+  } ],
+  "valid" : true,
+  "issues" : {
+    "pipelineIssues" : [ ],
+    "stageIssues" : { },
+    "issueCount" : 0
+  },
+  "previewable" : true
+}

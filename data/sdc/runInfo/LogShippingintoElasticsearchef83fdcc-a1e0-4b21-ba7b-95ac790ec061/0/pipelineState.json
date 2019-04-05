@@ -1,0 +1,17 @@
+{
+  "pipelineId" : "LogShippingintoElasticsearchef83fdcc-a1e0-4b21-ba7b-95ac790ec061",
+  "rev" : "0",
+  "user" : "admin",
+  "status" : "EDITED",
+  "message" : "Pipeline edited",
+  "timeStamp" : 1527946133677,
+  "attributes" : {
+    "IS_REMOTE_PIPELINE" : false,
+    "RUNTIME_PARAMETERS" : null
+  },
+  "executionMode" : "STANDALONE",
+  "metrics" : null,
+  "retryAttempt" : 0,
+  "nextRetryTimeStamp" : 0,
+  "name" : "LogShippingintoElasticsearchef83fdcc-a1e0-4b21-ba7b-95ac790ec061"
+}

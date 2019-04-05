@@ -1,0 +1,35 @@
+LOCAL_IP: localhost
+metricbeat:
+  config:
+    modules:
+      path: /home/zhanyl/conf/metricbeat/modules.d/*.yml
+      reload:
+        enabled: true
+output:
+  elasticsearch:
+    hosts:
+    - localhost:9200
+    password: 
+    username: 
+path:
+  config: /home/zhanyl/conf/metricbeat
+  data: /home/zhanyl/data/metricbeat
+  home: /home/zhanyl/software/metricbeat
+  logs: /home/zhanyl/log/metricbeat
+setup:
+  kibana:
+    enabled: true
+    host: lzyl1:5601
+    hosts:
+    - localhost:9092
+    password: kibana
+    topic: metricbeat
+    username: kibana
+  template:
+    settings:
+      index:
+        codec: best_compression
+        number_of_shards: 1
+tags:
+- 75.75.75.101
+- monelk

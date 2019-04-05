@@ -1,0 +1,48 @@
+{
+  "FieldPivoter_01" : {
+    "description" : "",
+    "label" : "Field Pivoter 1",
+    "xPos" : 295,
+    "yPos" : 51.666656494140625,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_01" : {
+    "description" : "",
+    "label" : "Expression Evaluator 1",
+    "xPos" : 498.3333740234375,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  "Elasticsearch_01" : {
+    "description" : "",
+    "label" : "Elasticsearch 1",
+    "xPos" : 940,
+    "yPos" : 50,
+    "stageType" : "TARGET"
+  },
+  "FieldTypeConverter_01" : {
+    "description" : "",
+    "label" : "Field Type Converter 1",
+    "xPos" : 720,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : 10,
+      "timeout" : 10000,
+      "writeToDestinations" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "HTTPClient_01" : {
+    "description" : "",
+    "label" : "HTTP Client 1",
+    "xPos" : 60,
+    "yPos" : 50,
+    "stageType" : "SOURCE"
+  }
+}

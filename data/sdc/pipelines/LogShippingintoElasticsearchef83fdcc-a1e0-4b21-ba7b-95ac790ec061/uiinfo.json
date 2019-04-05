@@ -1,0 +1,67 @@
+{
+  "com_streamsets_pipeline_stage_destination_elasticsearch_ElasticSearchDTarget_1" : {
+    "description" : "",
+    "label" : "Elasticsearch 1",
+    "xPos" : 1381.4091796875,
+    "yPos" : 50,
+    "stageType" : "TARGET"
+  },
+  "JythonEvaluator_01" : {
+    "description" : "",
+    "label" : "Jython Evaluator 1",
+    "xPos" : 940,
+    "yPos" : 47.445518493652344,
+    "stageType" : "PROCESSOR"
+  },
+  "com_streamsets_pipeline_stage_processor_expression_ExpressionDProcessor_1" : {
+    "description" : "",
+    "label" : "Expression Evaluator 1",
+    "xPos" : 280,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldRemover_01" : {
+    "description" : "",
+    "label" : "Field Remover 1",
+    "xPos" : 1160,
+    "yPos" : 48.85589599609375,
+    "stageType" : "PROCESSOR"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : "100",
+      "timeout" : 10000,
+      "writeToDestinations" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "com_streamsets_pipeline_stage_processor_geolocation_GeolocationDProcessor_1" : {
+    "description" : "",
+    "label" : "Geo IP 1",
+    "xPos" : 720,
+    "yPos" : 50,
+    "stageType" : "PROCESSOR"
+  },
+  "com_streamsets_pipeline_stage_processor_fieldtypeconverter_FieldTypeConverterDProcessor_1" : {
+    "description" : "",
+    "label" : "Field Converter 1",
+    "xPos" : 500,
+    "yPos" : 48.589622497558594,
+    "stageType" : "PROCESSOR"
+  },
+  "com_streamsets_pipeline_stage_origin_spooldir_SpoolDirDSource_1" : {
+    "yPos" : 50,
+    "stageType" : "SOURCE",
+    "rawSource" : {
+      "configuration" : [ {
+        "name" : "fileName"
+      } ]
+    },
+    "description" : "",
+    "label" : "Directory 1",
+    "xPos" : 60
+  }
+}

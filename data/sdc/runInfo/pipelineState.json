@@ -1,0 +1,17 @@
+{
+  "pipelineId" : "BeatsfromKafka92b81073-94e7-45b6-ad70-61d640372b1c",
+  "rev" : "0",
+  "user" : "admin",
+  "status" : "RUNNING",
+  "message" : null,
+  "timeStamp" : 1527989824157,
+  "attributes" : {
+    "IS_REMOTE_PIPELINE" : false,
+    "RUNTIME_PARAMETERS" : null
+  },
+  "executionMode" : "STANDALONE",
+  "metrics" : null,
+  "retryAttempt" : 0,
+  "nextRetryTimeStamp" : 0,
+  "name" : "BeatsfromKafka92b81073-94e7-45b6-ad70-61d640372b1c"
+}

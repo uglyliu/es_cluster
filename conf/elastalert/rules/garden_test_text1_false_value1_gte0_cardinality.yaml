@@ -1,0 +1,144 @@
+# Alert when the rate of events exceeds a threshold
+
+# (Optional)
+# Elasticsearch host
+# es_host: elasticsearch.example.com
+
+# (Optional)
+# Elasticsearch port
+# es_port: 14900
+
+# (OptionaL) Connect with SSL to Elasticsearch
+#use_ssl: True
+
+# (Optional) basic-auth username and password for Elasticsearch
+#es_username: 
+#es_password: 
+
+# (Required)
+# Rule name, must be unique
+#name: 
+
+# (Required)
+# Type of alert.
+# the frequency rule type alerts when num_events events occur with timeframe time
+type: cardinality
+
+# (Required)
+# Index to search, wildcard supported
+# 精确定位index，提高执行效率
+index: test*
+use_strftime_index: True
+
+# (Required, cardinality specific)
+# Count the number of unique values for this field
+cardinality_field: "value1"
+
+# (Required, frequency specific)
+# Alert when there less than 15 unique hostnames
+min_cardinality: 5
+
+# (Required, frequency specific)
+# num_events must occur within this amount of time to trigger an alert
+timeframe:
+    minutes: 2
+
+query_key: host
+
+# (Required)
+# A list of Elasticsearch filters used for find events
+# These filters are joined with AND and nested in a filtered query
+# For more info: http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html
+filter:
+     must:
+        - term:
+            text1.keyword: "false"
+        - range:
+            value1:
+                gte: 0
+     must_not:
+        - term:
+            text1.keyword: "我爱你"
+     should:
+        - term:
+            text1.keyword: "true"
+     filter:
+        - term:
+            text1.keyword: "false"
+
+use_local_time: True
+
+#use_terms_query: True
+#doc_type: metricsets
+
+smtp_host: localhost
+smpt_port: 25
+from_addr: "ELK@163"
+
+# (Required)
+# The alert is use when a match is found
+alert:
+- "email"
+
+alert_subject: "{0}的监控项{1}超过设定值,最近发生时间:{2}"
+alert_subject_args:
+    - host
+    - name
+    - "@timestamp"
+
+alert_text: |
+    监控项：{name}超过设定值:{filter}
+    主机：{host}
+    最近发生时间：{time}
+    当时值：{value}
+    时间段：{timeframe}
+    发生次数：{hit}
+#alert_text_type: alert_text_only
+alert_text_kw:
+    name: 'name'
+    host: 'host'
+    "@timestamp": 'time'
+    value1: 'value'
+    filter: 'filter'
+    num_hits: 'hit'
+    timeframe: 'timeframe'
+
+# (required, email specific)
+# a list of email addresses to send alerts to
+email:
+- "elk@elk.com"
+
+attach_related: True
+
+system_name: 数据平台
+system_no: 123
+patrol_title: |
+    {system_name}ELK警报,no:{system_no},id:{_id}
+patrol_title_kw: 
+    system_name: 'system_name'
+    system_no: 'system_no'
+    _id: '_id'
+patrol_text: |
+    {system_name}主机{host}的监控项{name}:{filter}在指定时间范围内{timeframe}对于字段{cardinality_field}出现多个唯一值，超过阈值{min_cardinality}，形成合并事件{num_matches}次
+patrol_text_kw:
+    system_name: 'system_name'
+    name: 'name'
+    host: 'host'
+    value1: 'value'
+    "@timestamp": 'time'
+    num_hits: 'hit'
+    filter: 'filter'
+    timeframe: 'timeframe'
+    cardinality_field: 'cardinality_field'
+    min_cardinality: 'min_cardinality'
+    num_matches: 'num_matches'
+    system_no: 'system_no'
+    _id: '_id'
+patrollogpath: /home/zhanyl/log/elastalert/{name}.log
+patrollogpath_kw: 
+    name: 'name'
+
+#realert:
+#    minutes: 2
+#exponential_realert:
+#    minutes: 60

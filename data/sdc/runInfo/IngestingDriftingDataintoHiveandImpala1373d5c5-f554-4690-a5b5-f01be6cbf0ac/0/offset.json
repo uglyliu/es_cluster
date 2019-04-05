@@ -1,0 +1,6 @@
+{
+  "version" : 2,
+  "offsets" : {
+    "$com.streamsets.datacollector.pollsource.offset$" : "9"
+  }
+}

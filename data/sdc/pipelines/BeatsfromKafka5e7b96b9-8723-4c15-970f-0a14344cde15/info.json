@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "BeatsfromKafka5e7b96b9-8723-4c15-970f-0a14344cde15",
+  "title" : "Beats from Kafka",
+  "description" : "将所有beats上传的数据分别存储到Elasticsearch中对应的index中",
+  "created" : 1552657580405,
+  "lastModified" : 1552699282488,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "f2101df7-05b0-4542-a8cf-d2b9c6fe8456",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ "生产" ]
+  },
+  "name" : "BeatsfromKafka5e7b96b9-8723-4c15-970f-0a14344cde15",
+  "sdcVersion" : "3.1.0.0",
+  "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+}

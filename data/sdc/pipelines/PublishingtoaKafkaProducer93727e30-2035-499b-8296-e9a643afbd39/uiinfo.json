@@ -1,0 +1,32 @@
+{
+  "Directory_01" : {
+    "yPos" : 50,
+    "stageType" : "SOURCE",
+    "rawSource" : {
+      "configuration" : [ {
+        "name" : "fileName"
+      } ]
+    },
+    "description" : "",
+    "label" : "Directory 1",
+    "xPos" : 60
+  },
+  "KafkaProducer_01" : {
+    "description" : "",
+    "label" : "Kafka Producer 1",
+    "xPos" : 280,
+    "yPos" : 50,
+    "stageType" : "TARGET"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : 10,
+      "timeout" : 10000,
+      "writeToDestinations" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  }
+}

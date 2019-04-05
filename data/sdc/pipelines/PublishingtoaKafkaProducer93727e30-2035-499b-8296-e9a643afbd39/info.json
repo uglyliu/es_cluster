@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "PublishingtoaKafkaProducer93727e30-2035-499b-8296-e9a643afbd39",
+  "title" : "Publishing to a Kafka Producer",
+  "description" : "Publishing to a Kafka Producer",
+  "created" : 1525939127806,
+  "lastModified" : 1525940041449,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "46e55699-dca9-4fea-bd58-9023a957835a",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ "tutorial-2" ]
+  },
+  "name" : "PublishingtoaKafkaProducer93727e30-2035-499b-8296-e9a643afbd39",
+  "sdcVersion" : "3.1.0.0",
+  "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+}

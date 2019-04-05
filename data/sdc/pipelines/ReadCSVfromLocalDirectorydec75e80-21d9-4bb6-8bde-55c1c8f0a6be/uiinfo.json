@@ -1,0 +1,90 @@
+{
+  "Directory_01" : {
+    "yPos" : 50,
+    "stageType" : "SOURCE",
+    "rawSource" : {
+      "configuration" : [ {
+        "name" : "fileName"
+      } ]
+    },
+    "description" : "",
+    "label" : "Directory 1",
+    "xPos" : 60
+  },
+  "JythonEvaluator_01" : {
+    "description" : "",
+    "label" : "Jython Evaluator 1",
+    "xPos" : 500,
+    "yPos" : 40,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_01" : {
+    "description" : "",
+    "label" : "Expression Evaluator 1",
+    "xPos" : 498.40911865234375,
+    "yPos" : 163.63638305664062,
+    "stageType" : "PROCESSOR"
+  },
+  "Elasticsearch_01" : {
+    "description" : "",
+    "label" : "Elasticsearch 1",
+    "xPos" : 1580,
+    "yPos" : 40,
+    "stageType" : "TARGET"
+  },
+  "RecordDeduplicator_01" : {
+    "outputStreamLabels" : [ "Unique Records", "Duplicate Records" ],
+    "yPos" : 88.70944213867188,
+    "stageType" : "PROCESSOR",
+    "description" : "",
+    "label" : "Record Deduplicator 1",
+    "xPos" : 1360
+  },
+  "ToError_01" : {
+    "description" : "",
+    "label" : "To Error 1",
+    "xPos" : 1580,
+    "yPos" : 190,
+    "stageType" : "TARGET"
+  },
+  "FieldTypeConverter_01" : {
+    "description" : "",
+    "label" : "Field Type Converter 1",
+    "xPos" : 940,
+    "yPos" : 37.41888427734375,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_02" : {
+    "description" : "",
+    "label" : "Expression Evaluator 2",
+    "xPos" : 1160,
+    "yPos" : 37.11851501464844,
+    "stageType" : "PROCESSOR"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : 10,
+      "timeout" : 10000,
+      "writeToDestinations" : false,
+      "executeLifecycleEvents" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "StreamSelector_01" : {
+    "description" : "",
+    "label" : "Stream Selector 1",
+    "xPos" : 280,
+    "yPos" : 110,
+    "stageType" : "PROCESSOR"
+  },
+  "FieldMasker_01" : {
+    "description" : "",
+    "label" : "Field Masker 1",
+    "xPos" : 720,
+    "yPos" : 40,
+    "stageType" : "PROCESSOR"
+  }
+}

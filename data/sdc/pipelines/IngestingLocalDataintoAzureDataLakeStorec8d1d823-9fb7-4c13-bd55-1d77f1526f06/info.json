@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "IngestingLocalDataintoAzureDataLakeStorec8d1d823-9fb7-4c13-bd55-1d77f1526f06",
+  "title" : "Ingesting Local Data into Azure Data Lake Store",
+  "description" : "Ingesting Local Data into Azure Data Lake Store",
+  "created" : 1525944390529,
+  "lastModified" : 1525944958118,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "d5f096c4-28e4-40c3-a41e-4ab5cfc5609e",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ "tutorial-adls-destination" ]
+  },
+  "name" : "IngestingLocalDataintoAzureDataLakeStorec8d1d823-9fb7-4c13-bd55-1d77f1526f06",
+  "sdcVersion" : "3.1.0.0",
+  "sdcId" : "8ba84595-26bf-11e8-a07f-27af852b2284"
+}
