@@ -168,15 +168,37 @@
 
 - **supervisor.sh**
   
-  节点层面的服务控制，对节点范围内对服务进行启停、状态监控，节点服务退出自动拉起
+  
 
 - **cluster.sh**
 
   集群层面的服务控制，在整个集群范围内对服务进行启动、状态监控
+  
+  cluster.sh: Usage cluster.sh -h cluster.list command {init|start|stop|shutdown|restart|status}
+  
+  cluster.list为定义整个集群的主机列表，一般存放在${HOME}/conf下
+  
+  command为supervisor.sh或者各服务的控制命令
+  
+  例如：
+  
+  需要查看整个集群的服务运行状态cluster.sh -h ~/conf/cluster.list supervisor.sh status
+  
+  需要查看整个集群的Elasticsearch hot节点服务状态cluster.sh -h ~/conf/cluster.list elasticsearch_hot.sh status
 
 - **sync.sh**
 
   将当前节点的数据完全同步到集群中的其他节点，保证节点间信息完全同步。用于扩容、升级、信息同步等场景
+  
+  节点层面的服务控制，对节点范围内对服务进行启停、状态监控，节点服务退出自动拉起
+  
+  Usage sync.sh {sdc_pipeline|nginx|elastalert|curator|upgrade|services}
+  
+  sync.sh sdc_pipeline|nginx|elastalert|curator 只同步指定的部分组件
+  
+  sync.sh upgrade 在集群升级中使用，旧的运行包会被完全替换
+  
+  sync.sh services 在扩容或配置修改后同步时使用，旧的配置会被更新
 
 
 ## 操作流程
@@ -317,6 +339,111 @@ Switch to another terminal and to confirm the configuration, then press [y|Y] to
   "persistent" : { },
   "transient" : { }
 }
+{
+  "acknowledged" : true
+}
+
+sync.sh upgrade
+Waiting for sync all services in cluster ...
+{
+  "acknowledged" : true
+}
+Shutdown service on es2 ...
+[1] 14:07:12 [SUCCESS] es2
+Shut down
+[1] 14:07:43 [SUCCESS] es2
+[1] 14:07:43 [SUCCESS] es2
+Synchronizing .bashrc to es2 ...
+[1] 14:07:44 [SUCCESS] es2
+Synchronizing .viminfo to es2 ...
+[1] 14:07:45 [SUCCESS] es2
+Synchronizing bin to es2 ...
+[1] 14:07:46 [SUCCESS] es2
+Synchronizing conf to es2 ...
+[1] 14:07:48 [SUCCESS] es2
+Synchronizing data/sdc to es2 ...
+[1] 14:07:49 [SUCCESS] es2
+[1] 14:07:50 [SUCCESS] es2
+Synchronizing install to es2 ...
+[1] 14:07:51 [SUCCESS] es2
+Synchronizing software to es2 ...
+[1] 14:07:52 [SUCCESS] es2
+[1] 14:07:54 [SUCCESS] es2
+[1] 14:09:37 [SUCCESS] es2
+[1] 14:09:38 [SUCCESS] es2
+[1] 14:09:38 [SUCCESS] es2
+[1] 14:09:39 [SUCCESS] es2
+[1] 14:09:40 [SUCCESS] es2
+Startup service on es2 ...
+[1] 14:09:40 [SUCCESS] es2
+{
+  "acknowledged" : true
+}
+{
+  "acknowledged" : true
+}
+Shutdown service on es3 ...
+[1] 14:10:39 [SUCCESS] es3
+Shut down
+[1] 14:11:10 [SUCCESS] es3
+[1] 14:11:11 [SUCCESS] es3
+Synchronizing .bashrc to es3 ...
+[1] 14:11:11 [SUCCESS] es3
+Synchronizing .viminfo to es3 ...
+[1] 14:11:12 [SUCCESS] es3
+Synchronizing bin to es3 ...
+[1] 14:11:14 [SUCCESS] es3
+Synchronizing conf to es3 ...
+[1] 14:11:16 [SUCCESS] es3
+Synchronizing data/sdc to es3 ...
+[1] 14:11:17 [SUCCESS] es3
+[1] 14:11:18 [SUCCESS] es3
+Synchronizing install to es3 ...
+[1] 14:11:19 [SUCCESS] es3
+Synchronizing software to es3 ...
+[1] 14:11:21 [SUCCESS] es3
+[1] 14:11:23 [SUCCESS] es3
+[1] 14:13:06 [SUCCESS] es3
+[1] 14:13:07 [SUCCESS] es3
+[1] 14:13:08 [SUCCESS] es3
+[1] 14:13:09 [SUCCESS] es3
+[1] 14:13:09 [SUCCESS] es3
+Startup service on es3 ...
+[1] 14:13:10 [SUCCESS] es3
+{
+  "acknowledged" : true
+}
+{
+  "acknowledged" : true
+}
+Shutdown service on es4 ...
+[1] 14:14:10 [SUCCESS] es4
+Shut down
+[1] 14:14:41 [SUCCESS] es4
+[1] 14:14:42 [SUCCESS] es4
+Synchronizing .bashrc to es4 ...
+[1] 14:14:42 [SUCCESS] es4
+Synchronizing .viminfo to es4 ...
+[1] 14:14:44 [SUCCESS] es4
+Synchronizing bin to es4 ...
+[1] 14:14:45 [SUCCESS] es4
+Synchronizing conf to es4 ...
+[1] 14:14:46 [SUCCESS] es4
+Synchronizing data/sdc to es4 ...
+[1] 14:14:48 [SUCCESS] es4
+[1] 14:14:49 [SUCCESS] es4
+Synchronizing install to es4 ...
+[1] 14:14:50 [SUCCESS] es4
+Synchronizing software to es4 ...
+[1] 14:14:51 [SUCCESS] es4
+[1] 14:14:53 [SUCCESS] es4
+[1] 14:16:33 [SUCCESS] es4
+[1] 14:16:33 [SUCCESS] es4
+[1] 14:16:34 [SUCCESS] es4
+[1] 14:16:34 [SUCCESS] es4
+[1] 14:16:35 [SUCCESS] es4
+Startup service on es4 ...
+[1] 14:16:36 [SUCCESS] es4
 {
   "acknowledged" : true
 }
