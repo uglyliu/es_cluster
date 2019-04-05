@@ -3,6 +3,17 @@
 
 > **本文主要向大家介绍一种在生产环境如何自动化部署ES等分布式集群的方法，通过该方法可以很方便地对多种分布式集群进行部署、扩容、升级、日常维护等运维操作。**
 
+## 集群界面
+
+### ES Cluster
+![es](conf/gif/es.gif)
+
+### SDC pipeline
+![sdc](conf/gif/sdc.gif)
+
+### Elastalert
+![alert](conf/gif/alert.gif)
+
 ## 部署准备
 - 安装好系统及基本软件，如：supervisor, jdk, pip, python2.7及相关依赖包(curator)
 - 设置好核心参数（根据各产品的官方要求设置）
