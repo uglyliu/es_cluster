@@ -160,7 +160,7 @@
 ## 重要命令
 - **initnode.sh**
   
-  初始安装或升级安装一个节点上所有服务、组件。在运行过程中会询问需要安装的软件版本并进行安装包的检查，如果对于版本无需安装回车即可
+  初始安装或升级安装一个节点上所有服务、组件。在运行过程中会询问需要安装的软件版本并进行安装包的检查，如果对于版本无需安装保持为空回车即可
   
 - **各服务脚本**
   
@@ -225,8 +225,10 @@
 - 部署、升级场景：选择集群中任意一个节点作为首节点（初始节点），使用initnode.sh对该节点进行安装、升级，验证该节点所有服务全部正常
 - 变更场景：选择集群中任意一个节点作为首节点（变更节点），对配置进行修改，验证该节点所有服务全部正常
 - 在首节点上执行sync.sh，采用轮转的方式将首节点的信息完全同步到集群中其他节点，完成一个自动再处理下一个
+
+> 部署：
 ```bash
-部署：
+在节点es1运行
 initnode.sh 
 Do you confirm to initialize the present node? (Y/N)y
 Which elasticsearch version will you use? 6.4.2
@@ -247,8 +249,19 @@ for descriptions of what these permissions allow and the associated risks.
 
 Continue with installation? [y/N]y
 ... ...
-
-扩容：
+Switch to another terminal and to confirm the configuration, then press [y|Y] to continue ... (Y/N)y
+{
+  "acknowledged" : true,
+  "persistent" : { },
+  "transient" : { }
+}
+{
+  "acknowledged" : true
+}
+```
+> 扩容：
+```bash
+在节点es1运行
 sync.sh services
 Waiting for sync all services in cluster ...
 {
@@ -353,8 +366,11 @@ Startup service on es4 ...
 {
   "acknowledged" : true
 }
+```
 
-升级：
+> 升级：
+```bash
+在节点es1运行
 initnode.sh
 Do you confirm to initialize the present node? (Y/N)y
 Which elasticsearch version will you use? 6.7.0
@@ -489,6 +505,11 @@ Startup service on es4 ...
 {
   "acknowledged" : true
 }
+```
+
+> 变更、日常集群服务重启：
+```bash
+同扩容场景的操作方式
 ```
 
 ## 架构优势
