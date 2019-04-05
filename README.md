@@ -1,7 +1,7 @@
 # es_cluster
 自动化部署、扩容、升级ES等分布式集群
 
-> 本文主要向大家介绍一种在生产环境如何自动化部署ES等分布式集群的方法，通过该方法可以很方便地对多种分布式集群进行部署、扩容、升级、日常维护等运维操作。
+> **本文主要向大家介绍一种在生产环境如何自动化部署ES等分布式集群的方法，通过该方法可以很方便地对多种分布式集群进行部署、扩容、升级、日常维护等运维操作。**
 
 ## 部署准备
 - 安装好系统及基本软件，如：supervisor, jdk, pip, python2.7及相关依赖包(curator)
@@ -160,7 +160,7 @@
 ## 重要命令
 - **initnode.sh**
   
-  初始安装或升级安装一个节点上所有服务、组件
+  初始安装或升级安装一个节点上所有服务、组件。在运行过程中会询问需要安装的软件版本并进行安装包的检查，如果对于版本无需安装回车即可
   
 - **各服务脚本**
   
@@ -203,6 +203,10 @@
   需要查看整个集群的服务运行状态cluster.sh -h ~/conf/cluster.list supervisor.sh status
   
   需要查看整个集群的Elasticsearch hot节点服务状态cluster.sh -h ~/conf/cluster.list elasticsearch_hot.sh status
+  
+  启动整个集群 cluster.sh -h ~/conf/cluster.list supervisor.sh init
+  
+  停止整个集群 cluster.sh -h ~/conf/cluster.list supervisor.sh shutdown
 
 - **sync.sh**
 
@@ -218,10 +222,32 @@
 
 
 ## 操作流程
-- 部署、升级：选择集群中任意一个节点作为首节点（初始节点），使用initnode.sh对该节点进行安装、升级，验证该节点所有服务全部正常
-- 变更：选择集群中任意一个节点作为首节点（变更节点），对配置进行修改，验证该节点所有服务全部正常
+- 部署、升级场景：选择集群中任意一个节点作为首节点（初始节点），使用initnode.sh对该节点进行安装、升级，验证该节点所有服务全部正常
+- 变更场景：选择集群中任意一个节点作为首节点（变更节点），对配置进行修改，验证该节点所有服务全部正常
 - 在首节点上执行sync.sh，采用轮转的方式将首节点的信息完全同步到集群中其他节点，完成一个自动再处理下一个
 ```bash
+部署：
+initnode.sh 
+Do you confirm to initialize the present node? (Y/N)y
+Which elasticsearch version will you use? 6.4.2
+Which elasticsearch curator version will you use? 5.5.4
+Which elastalert kibana plugin version will you use? 1.0.1
+Which jdk version for elasticsearch will you use? 10.0.2
+Which kafka version will you use? 1.1.0
+Which streamsets data collector version will you use? 3.1.0
+... ...
+-> Downloading file:///home/zhanyl/install/elasticsearch-analysis-ik-6.4.2.zip
+[=================================================] 100%   
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@     WARNING: plugin requires additional permissions     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+* java.net.SocketPermission * connect,resolve
+See http://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html
+for descriptions of what these permissions allow and the associated risks.
+
+Continue with installation? [y/N]y
+... ...
+
 扩容：
 sync.sh services
 Waiting for sync all services in cluster ...
