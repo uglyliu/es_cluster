@@ -165,6 +165,113 @@
 - 部署、升级：选择集群中任意一个节点作为首节点（初始节点），使用initnode.sh对该节点进行安装、升级，验证该节点所有服务全部正常
 - 变更：选择集群中任意一个节点作为首节点（变更节点），对配置进行修改，验证该节点所有服务全部正常
 - 在首节点上执行sync.sh，采用轮转的方式将首节点的信息完全同步到集群中其他节点，完成一个自动再处理下一个
+```bash
+扩容：
+sync.sh services
+Waiting for sync all services in cluster ...
+{
+  "acknowledged" : true
+}
+Shutdown service on es2 ...
+[1] 11:45:48 [FAILURE] es2 Exited with error code 127
+Stderr: bash: /home/zhanyl/bin/supervisor.sh: No such file or directory
+[1] 11:46:19 [FAILURE] es2 Exited with error code 1
+Stderr: chown: cannot access '/home/zhanyl/software/packetbeat/packetbeat': No such file or directory
+[1] 11:46:19 [FAILURE] es2 Exited with error code 1
+Stderr: chown: cannot access '/home/zhanyl/conf/packetbeat/*.yml': No such file or directory
+Synchronizing .bashrc to es2 ...
+[1] 11:46:20 [SUCCESS] es2
+Synchronizing .viminfo to es2 ...
+[1] 11:46:21 [SUCCESS] es2
+Synchronizing bin to es2 ...
+[1] 11:46:22 [SUCCESS] es2
+Synchronizing conf to es2 ...
+[1] 11:46:24 [SUCCESS] es2
+Synchronizing data/sdc to es2 ...
+[1] 11:46:26 [SUCCESS] es2
+Synchronizing install to es2 ...
+[1] 11:46:27 [SUCCESS] es2
+Synchronizing software to es2 ...
+[1] 11:47:00 [SUCCESS] es2
+[1] 11:48:51 [SUCCESS] es2
+[1] 11:48:52 [SUCCESS] es2
+[1] 11:48:53 [SUCCESS] es2
+[1] 11:48:53 [SUCCESS] es2
+[1] 11:48:54 [SUCCESS] es2
+Startup service on es2 ...
+[1] 11:48:55 [SUCCESS] es2
+{
+  "acknowledged" : true
+}
+{
+  "acknowledged" : true
+}
+Shutdown service on es3 ...
+[1] 11:49:29 [FAILURE] es3 Exited with error code 127
+Stderr: bash: /home/zhanyl/bin/supervisor.sh: No such file or directory
+[1] 11:50:00 [FAILURE] es3 Exited with error code 1
+Stderr: chown: cannot access '/home/zhanyl/software/packetbeat/packetbeat': No such file or directory
+[1] 11:50:01 [FAILURE] es3 Exited with error code 1
+Stderr: chown: cannot access '/home/zhanyl/conf/packetbeat/*.yml': No such file or directory
+Synchronizing .bashrc to es3 ...
+[1] 11:50:01 [SUCCESS] es3
+Synchronizing .viminfo to es3 ...
+[1] 11:50:03 [SUCCESS] es3
+Synchronizing bin to es3 ...
+[1] 11:50:04 [SUCCESS] es3
+Synchronizing conf to es3 ...
+[1] 11:50:06 [SUCCESS] es3
+Synchronizing data/sdc to es3 ...
+[1] 11:50:08 [SUCCESS] es3
+Synchronizing install to es3 ...
+[1] 11:50:09 [SUCCESS] es3
+Synchronizing software to es3 ...
+[1] 11:52:01 [SUCCESS] es3
+[1] 11:53:55 [SUCCESS] es3
+[1] 11:53:55 [SUCCESS] es3
+[1] 11:53:56 [SUCCESS] es3
+[1] 11:53:57 [SUCCESS] es3
+[1] 11:53:57 [SUCCESS] es3
+Startup service on es3 ...
+[1] 11:53:58 [SUCCESS] es3
+{
+  "acknowledged" : true
+}
+{
+  "acknowledged" : true
+}
+Shutdown service on es4 ...
+[1] 11:54:33 [FAILURE] es4 Exited with error code 127
+Stderr: bash: /home/zhanyl/bin/supervisor.sh: No such file or directory
+[1] 11:55:04 [FAILURE] es4 Exited with error code 1
+Stderr: chown: cannot access '/home/zhanyl/software/packetbeat/packetbeat': No such file or directory
+[1] 11:55:05 [FAILURE] es4 Exited with error code 1
+Stderr: chown: cannot access '/home/zhanyl/conf/packetbeat/*.yml': No such file or directory
+Synchronizing .bashrc to es4 ...
+[1] 11:55:06 [SUCCESS] es4
+Synchronizing .viminfo to es4 ...
+[1] 11:55:08 [SUCCESS] es4
+Synchronizing bin to es4 ...
+[1] 11:55:09 [SUCCESS] es4
+Synchronizing conf to es4 ...
+[1] 11:55:11 [SUCCESS] es4
+Synchronizing data/sdc to es4 ...
+[1] 11:55:14 [SUCCESS] es4
+Synchronizing install to es4 ...
+[1] 11:55:16 [SUCCESS] es4
+Synchronizing software to es4 ...
+[1] 11:57:14 [SUCCESS] es4
+[1] 11:59:17 [SUCCESS] es4
+[1] 11:59:18 [SUCCESS] es4
+[1] 11:59:18 [SUCCESS] es4
+[1] 11:59:19 [SUCCESS] es4
+[1] 11:59:19 [SUCCESS] es4
+Startup service on es4 ...
+[1] 11:59:20 [SUCCESS] es4
+{
+  "acknowledged" : true
+}
+```
 
 ## 架构优势
 - 实现去中心化结构，无单点
