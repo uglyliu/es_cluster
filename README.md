@@ -39,6 +39,105 @@
 - **software**
 
   各服务、组件的运行程序，由各安装包安装后产生；按服务、组件分子目录存放
+  
+```bash
+├── bin
+│   ├── clean_log.sh
+│   ├── clean_tmp.sh
+│   ├── cluster.sh
+│   ├── elastalert_leader.sh
+│   ├── elastalert.sh
+│   ├── elasticsearch_hot.sh
+│   ├── elasticsearch_warm.sh
+│   ├── filebeat.sh
+│   ├── h2w.sh
+│   ├── heartbeat.sh
+│   ├── initnode.sh
+│   ├── kafka.sh
+│   ├── kibana.sh
+│   ├── metricbeat.sh
+│   ├── nginx.sh
+│   ├── open_closed_index.sh
+│   ├── packetbeat.sh
+│   ├── pre_create_index.sh
+│   ├── redis.sh
+│   ├── sdc_pipeline.sh
+│   ├── sdc.sh
+│   ├── supervisor.sh
+│   ├── sync.sh
+│   └── zookeeper.sh
+├── conf
+│   ├── cluster.list
+│   ├── elastalert
+│   ├── elastalert.list
+│   ├── elastalert-server
+│   ├── elasticsearch
+│   ├── elasticsearch_data.list
+│   ├── elasticsearch_hot.list
+│   ├── elasticsearch_master.list
+│   ├── elasticsearch_warm.list
+│   ├── filebeat
+│   ├── filebeat.list
+│   ├── heartbeat
+│   ├── heartbeat.list
+│   ├── kafka
+│   ├── kafka.list
+│   ├── kibana
+│   ├── kibana.list
+│   ├── metricbeat
+│   ├── metricbeat.list
+│   ├── nginx
+│   ├── nginx.list
+│   ├── packetbeat
+│   ├── packetbeat.list
+│   ├── redis
+│   ├── redis.list
+│   ├── sdc
+│   ├── sdc.list
+│   ├── supervisor
+│   └── zookeeper.list
+├── data
+│   └── sdc
+├── install
+│   ├── elastalert-kibana-plugin-1.0.1-6.4.2.zip
+│   ├── elastalert-kibana-plugin-1.0.3-6.7.0.zip
+│   ├── elasticsearch-6.4.2.tar.gz
+│   ├── elasticsearch-6.7.0.tar.gz
+│   ├── elasticsearch-analysis-ik-6.4.2.zip
+│   ├── elasticsearch-analysis-ik-6.7.0.zip
+│   ├── filebeat-6.4.2-linux-x86_64.tar.gz
+│   ├── filebeat-6.7.0-linux-x86_64.tar.gz
+│   ├── files.txt
+│   ├── heartbeat-6.4.2-linux-x86_64.tar.gz
+│   ├── heartbeat-6.7.0-linux-x86_64.tar.gz
+│   ├── jdk-10.0.2_linux-x64_bin.tar.gz
+│   ├── jdk-11.0.1_linux-x64_bin.tar.gz
+│   ├── kafka_2.11-1.1.0.tgz
+│   ├── kafka_2.11-2.1.1.tgz
+│   ├── kibana-6.4.2-linux-x86_64.tar.gz
+│   ├── kibana-6.7.0-linux-x86_64.tar.gz
+│   ├── metricbeat-6.4.2-linux-x86_64.tar.gz
+│   ├── metricbeat-6.7.0-linux-x86_64.tar.gz
+│   ├── openresty-1.13.6.2
+│   ├── openresty-1.13.6.2.tar.gz
+│   ├── openssl-1.1.1
+│   ├── openssl-1.1.1.tar.gz
+│   ├── packetbeat-6.4.2-linux-x86_64.tar.gz
+│   ├── packetbeat-6.7.0-linux-x86_64.tar.gz
+│   ├── pcre-8.42
+│   ├── pcre-8.42.tar.gz
+│   ├── streamsets-datacollector-core-3.1.0.tgz
+│   ├── streamsets-datacollector-core-3.7.2.tgz
+│   ├── v5.5.4.tar.gz
+│   └── v5.6.0.tar.gz
+├── log
+├── README.md
+├── software
+│   ├── elastalert
+│   ├── elastalert-server
+│   ├── nginx
+│   └── redis
+```
 
 ## 重要命令
 - **initnode.sh**
