@@ -22,7 +22,25 @@
 
 - **conf**
 
-  各服务、组件的配置文件；按服务、组件分子目录存放，事先准备好；该目录下的*.list文件定义了哪些节点启动哪些服务以及运行角色
+  各服务、组件的配置文件；按服务、组件分子目录存放，事先准备好；
+  
+  该目录下的*.list文件定义了哪些节点启动哪些服务以及运行角色；
+  
+  \*.list文件里面存储的是主机名列表，运行主机如果在列表中就会启动相关服务，例如：
+  ```bash
+  cat kafka.list
+  es1
+  es2
+  es3
+  ```
+  则表明kafka服务会在es1,es2,es3节点启动
+  ```bash
+  cat elasticsearch_master.list
+  es1
+  es2
+  es3
+  ```
+  则表明elasticsearch的master节点会运行在es1,es2,es3节点
 
 - **data**
 
@@ -268,6 +286,37 @@ Synchronizing software to es4 ...
 [1] 11:59:19 [SUCCESS] es4
 Startup service on es4 ...
 [1] 11:59:20 [SUCCESS] es4
+{
+  "acknowledged" : true
+}
+
+升级：
+initnode.sh
+Do you confirm to initialize the present node? (Y/N)y
+Which elasticsearch version will you use? 6.7.0
+Which elasticsearch curator version will you use? 5.6.0
+Which elastalert kibana plugin version will you use? 1.0.3
+Which jdk version for elasticsearch will you use? 11.0.1
+Which kafka version will you use? 2.1.1
+Which streamsets data collector version will you use? 3.7.2
+... ...
+-> Downloading file:///home/zhanyl/install/elasticsearch-analysis-ik-6.7.0.zip
+[=================================================] 100%   
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@     WARNING: plugin requires additional permissions     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+* java.net.SocketPermission * connect,resolve
+See http://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html
+for descriptions of what these permissions allow and the associated risks.
+
+Continue with installation? [y/N]y
+... ...
+Switch to another terminal and to confirm the configuration, then press [y|Y] to continue ... (Y/N)y
+{
+  "acknowledged" : true,
+  "persistent" : { },
+  "transient" : { }
+}
 {
   "acknowledged" : true
 }
