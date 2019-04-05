@@ -165,10 +165,28 @@
 - **各服务脚本**
   
   服务层面控制，负责自身服务的启停、状态监控，依据*.list来设置合理的运行环境、动态修改配置文件等
+  
+  例如：
+  
+  elasticsearch_hot.sh: Usage elasticsearch_hot.sh {start|stop|restart|status}
+  
+  sdc.sh: Usage sdc.sh {start|stop|restart|status}
+  
+  kafka.sh: Usage kafka.sh {start|stop|restart|status}
+  
+  nginx.sh: Usage nginx.sh {start|stop|restart|status|reload}
 
 - **supervisor.sh**
   
+  节点层面的服务控制，对节点范围内对服务进行启停、状态监控，节点服务退出自动拉起
   
+  supervisor.sh: Usage supervisor.sh {init|start|stop|shutdown|restart|status}
+  
+  supervisor.sh init 启动supervisord服务并启动其管理的所有服务
+  
+  supervisor.sh shutdown 关闭supervisord服务
+  
+  supervisor.sh start|stop||restart|status 对指定的服务进行启动、停止、重启、状态查看
 
 - **cluster.sh**
 
@@ -189,8 +207,6 @@
 - **sync.sh**
 
   将当前节点的数据完全同步到集群中的其他节点，保证节点间信息完全同步。用于扩容、升级、信息同步等场景
-  
-  节点层面的服务控制，对节点范围内对服务进行启停、状态监控，节点服务退出自动拉起
   
   Usage sync.sh {sdc_pipeline|nginx|elastalert|curator|upgrade|services}
   
