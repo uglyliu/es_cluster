@@ -1,3 +1,5 @@
+由于其他产品安装包较大且容易从官方网站下载，因此在这里列出所需的各安装包列表
+
 -rw-rw-r--  1 zhanyl zhanyl  20147047 Apr  5 11:03 elastalert-kibana-plugin-1.0.1-6.4.2.zip
 -rw-rw-r--  1 zhanyl zhanyl  22930892 Apr  5 11:03 elastalert-kibana-plugin-1.0.3-6.7.0.zip
 -rw-rw-r--  1 zhanyl zhanyl  97914519 Apr  5 11:03 elasticsearch-6.4.2.tar.gz
