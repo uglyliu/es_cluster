@@ -27,7 +27,7 @@
 ## 演示环境
 
 - 物理环境配置
-	- 4个vmware节点（es1-es4） 2C/5G/40G Ubuntu 8.04
+	- 4个vmware节点（es1-es4） 2C/5G/40G Ubuntu 18.04
    ```bash
    cat /etc/hosts
    192.168.199.102 es1
