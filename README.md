@@ -554,11 +554,73 @@ Startup service on es4 ...
 {
   "acknowledged" : true
 }
-```
 
 > 变更、日常集群服务重启：
 ```bash
 同扩容场景的操作方式
+```
+
+> 本地检查状态（无需认证）：
+```bash
+curl -XGET "localhost:9200/_cluster/health?pretty" 
+{
+  "cluster_name" : "monelk",
+  "status" : "green",
+  "timed_out" : false,
+  "number_of_nodes" : 8,
+  "number_of_data_nodes" : 8,
+  "active_primary_shards" : 116,
+  "active_shards" : 232,
+  "relocating_shards" : 0,
+  "initializing_shards" : 0,
+  "unassigned_shards" : 0,
+  "delayed_unassigned_shards" : 0,
+  "number_of_pending_tasks" : 0,
+  "number_of_in_flight_fetch" : 0,
+  "task_max_waiting_in_queue_millis" : 0,
+  "active_shards_percent_as_number" : 100.0
+}
+
+curl -XGET "localhost:9200/_cat/nodes?pretty"               
+192.168.199.103 38 97 22 0.64 0.71 0.77 d  - es2_warm
+192.168.199.104 57 88 18 0.26 0.29 0.41 d  - es3_warm
+192.168.199.104 44 88 15 0.26 0.29 0.41 md * es3_hot
+192.168.199.103 68 97 24 0.64 0.71 0.77 md - es2_hot
+192.168.199.105 88 71 25 1.53 1.20 1.02 d  - es4_hot
+192.168.199.102 55 90 13 0.44 0.66 0.81 d  - es1_warm
+192.168.199.105 70 71 24 1.53 1.20 1.02 d  - es4_warm
+192.168.199.102 69 90  9 0.44 0.66 0.81 md - es1_hot
+```
+> 远程检查状态（需认证）：
+```bash
+curl -XGET -u elastic:elastic "es1:9500/_cluster/health?pretty" 
+{
+  "cluster_name" : "monelk",
+  "status" : "green",
+  "timed_out" : false,
+  "number_of_nodes" : 8,
+  "number_of_data_nodes" : 8,
+  "active_primary_shards" : 116,
+  "active_shards" : 232,
+  "relocating_shards" : 0,
+  "initializing_shards" : 0,
+  "unassigned_shards" : 0,
+  "delayed_unassigned_shards" : 0,
+  "number_of_pending_tasks" : 0,
+  "number_of_in_flight_fetch" : 0,
+  "task_max_waiting_in_queue_millis" : 0,
+  "active_shards_percent_as_number" : 100.0
+}
+
+curl -XGET -u elastic:elastic "es1:9500/_cat/nodes?pretty"          
+192.168.199.103 69 97 21 0.54 0.65 0.72 d  - es2_warm
+192.168.199.105 51 72 13 0.58 0.84 0.92 d  - es4_hot
+192.168.199.104 44 89 28 0.20 0.29 0.39 d  - es3_warm
+192.168.199.102 66 90 12 0.58 0.55 0.71 d  - es1_warm
+192.168.199.102 57 90 10 0.58 0.55 0.71 md - es1_hot
+192.168.199.103 83 97 25 0.54 0.65 0.72 md - es2_hot
+192.168.199.105 70 72 13 0.58 0.84 0.92 d  - es4_warm
+192.168.199.104 83 89 28 0.20 0.29 0.39 md * es3_hot
 ```
 
 ## 架构优势
