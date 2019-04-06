@@ -24,7 +24,44 @@
 - 对于SDC,kafka,zookeeper,redis集群通常会单独部署，这里仅仅作简单演示，展示可以采用本方法进行自动部署
 - ${HOME}/data/sdc下为演示用到的pipeline
 
+## 演示环境
+
+- 物理环境配置
+	- 4个vmware节点（es1-es4） 2C/5G/40G Ubuntu 8.04
+	```bash
+cat /etc/hosts
+192.168.199.102 es1
+192.168.199.103 es2
+192.168.199.104 es3
+192.168.199.105 es4
+	```
+- 集群节点配置
+	- 每个物理节点上部署2个ES节点（hot/warm）,共8个
+	- 3个kibana节点
+	- 3个kakfa/zookeeper节点
+	- 4个SDC节点
+	- 4个Nginx节点
+	- 4个beats节点
+	- 3个elastalert节点
+	- 4个curator节点
+- 初始安装版本
+	- Elasticsearch 6.4.2
+	- Curator 5.5.4
+	- Elastalert Plugin 1.0.1
+	- JDK 10.0.2
+	- Kafka 1.1.0
+	- SDC 3.1.0 
+- 升级安装版本
+	- Elasticsearch 6.7.0
+	- Curator 5.6.0
+	- Elastalert Plugin 1.0.3
+	- JDK 11.0.1
+	- Kafka 2.1.1
+	- SDC 3.7.2
+
 ## 目录结构
+
+
 部署用户目录下存放各子目录的功能和内容
 
 - **bin**
