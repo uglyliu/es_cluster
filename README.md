@@ -554,6 +554,7 @@ Startup service on es4 ...
 {
   "acknowledged" : true
 }
+```
 
 > 变更、日常集群服务重启：
 ```bash
