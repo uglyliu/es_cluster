@@ -532,13 +532,3 @@ Startup service on es4 ...
   4. ***任何修改在小范围内通过验证后才同步到整个集群***
   5. ***结构简单易维护***
   6. ***该架构适用于多种软件、服务，易于快速扩展***
-
-```flow
-st=>start: 开始
-op=>operation: My Operation
-cond=>condition: Yes or No?
-e=>end
-st->op->cond
-cond(yes)->e
-cond(no)->op
-&```
