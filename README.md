@@ -20,7 +20,7 @@
 - 各节点部署用户间建立好节点间互信
 - 准备好配置文件并放置在${HOME}/conf下，分模块目录存放
 - 将下载好的软件包放置在${HOME}/install下（从各产品的官方网站下载）
-- 由于nginx, elastalert和elastalert-server为定制开发版，因此不能直接自动安装，需手工安装
+- 由于nginx, elastalert和elastalert-server为定制开发版，因此不能直接自动安装，需手工安装（修改后版本在本项目中）
 - 对于SDC,kafka,zookeeper,redis集群通常会单独部署，这里仅仅作简单演示，展示可以采用本方法进行自动部署
 - ${HOME}/data/sdc下为演示用到的pipeline
 
@@ -60,7 +60,6 @@
 	- SDC 3.7.2
 
 ## 目录结构
-
 
 部署用户目录下存放各子目录的功能和内容
 
