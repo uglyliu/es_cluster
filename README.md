@@ -60,7 +60,7 @@
 	- JDK 11.0.1
 	- Kafka 2.1.1
 	- SDC 3.7.2
-- ES用户:口令 elastic:elastic
+- ES/KIBANA用户:口令 elastic:elastic
 - SDC用户:口令 admin:admin
 
 ## 目录结构
